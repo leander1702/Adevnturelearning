@@ -9,7 +9,7 @@ import Home from "./pages/Home/Home";
 // import Course from "./pages/Courses/Course";
 import ContactAll from "./pages/Contactus/ContactAll";
 import AllBlogs from "./pages/Resources/AllBlogs";
-import OnlineTraining from "./pages/OnlineTrain/OnlineTraining";
+import OnlineTrain from "./pages/OnlineTraining/OnlineTrain";
 import Corporate from "./pages/CorporateTrain/Corporate";
 import { SiConcourse } from "react-icons/si";
 import Full_stack from "./components/Courses/fullstack/Course";
@@ -44,7 +44,7 @@ function App() {
           </Route>
           <Route path="/contact" element={<ContactAll/>}/>
           <Route path="/blogs" element={<AllBlogs/>}/>
-          <Route path="/onlinetraining" element={<OnlineTraining/>}/>
+          <Route path="/onlinetraining" element={<OnlineTrain/>}/>
           <Route path="/corporate" element={<Corporate/>}/>
         </Routes>
         <Footer />
