@@ -34,7 +34,7 @@ function Companies(){
     return(
         <>
         <div className="w-full text-center bg-white mb-5">
-        <h2 className="text-3xl font-semibold text-indigo-700 mb-6">
+        <h2 className="text-3xl font-semibold text-[#0057D3] mb-6">
           Top Companies use Adventure Learning for their Enterprises
         </h2>
           <div className="w-full overflow-hidden  mt-4 sm:py-0 bg-[#F4F9FF]">

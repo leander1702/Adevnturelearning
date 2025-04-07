@@ -5,7 +5,7 @@ function UpskillForm() {
     <div className="bg-blue-50 py-12">
       <div className="container mx-auto px-4">
         <div className="bg-white rounded-lg shadow-md p-8">
-          <h2 className="text-2xl font-semibold text-blue-700 mb-2 text-center">
+          <h2 className="text-2xl font-semibold text-[#0057D3] mb-2 text-center">
             Transform Your Workforce
           </h2>
           <p className="text-gray-600 mb-6 text-center">Write to us for your upskilling needs</p>
@@ -80,7 +80,7 @@ function UpskillForm() {
             <div className="col-span-full">
               <button
                 type="submit"
-                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-md focus:outline-none focus:shadow-outline"
+                className="bg-[#0057D3] border hover:border-[#0057D3] hover:bg-white hover:text-[#0057D3] text-white font-semibold py-3 px-6 rounded-md focus:outline-none focus:shadow-outline"
               >
                 Submit
               </button>

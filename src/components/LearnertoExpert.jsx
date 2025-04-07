@@ -4,7 +4,7 @@ function LearnerToExpert() {
   return (
     <div className="bg-gray-50 py-16">
       <div className="container mx-auto px-4 text-center">
-        <h2 className="text-3xl font-semibold text-indigo-700 mb-6">
+        <h2 className="text-3xl font-semibold text-[#0057D3] mb-6">
           From Learner to Industry Expert
         </h2>
         <p className="text-lg text-gray-700 mb-8">
@@ -16,7 +16,7 @@ function LearnerToExpert() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Industry-Level Training Card */}
           <div className="bg-white rounded-lg shadow-md p-6 text-center">
-            <h3 className="text-xl font-semibold text-blue-600 mb-2">
+            <h3 className="text-xl font-semibold text-[#0057D3] mb-2">
               Industry-Level Training
             </h3>
             <p className="text-gray-600 text-sm">
@@ -27,7 +27,7 @@ function LearnerToExpert() {
 
           {/* Mentorship & Mock Interviews Card */}
           <div className="bg-white rounded-lg shadow-md p-6 text-center">
-            <h3 className="text-xl font-semibold text-green-600 mb-2">
+            <h3 className="text-xl font-semibold text-[#0057D3] mb-2">
               Mentorship & Mock Interviews
             </h3>
             <p className="text-gray-600 text-sm">
@@ -38,7 +38,7 @@ function LearnerToExpert() {
 
           {/* Placement & Career Launch Card */}
           <div className="bg-white rounded-lg shadow-md p-6 text-center">
-            <h3 className="text-xl font-semibold text-purple-600 mb-2">
+            <h3 className="text-xl font-semibold text-[#0057D3] mb-2">
               Placement & Career Launch
             </h3>
             <p className="text-gray-600 text-sm">

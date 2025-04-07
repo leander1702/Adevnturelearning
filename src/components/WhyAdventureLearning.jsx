@@ -1,5 +1,6 @@
 import React from 'react';
 import { CheckCircleIcon } from '@heroicons/react/24/solid'; // Assuming you have Heroicons installed
+import avd1 from '../assets/'
 
 function WhyAdventureLearning() {
   return (
@@ -7,49 +8,49 @@ function WhyAdventureLearning() {
       <div className="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
         {/* Left Section - Text */}
         <div className="text-gray-800">
-          <h2 className="text-2xl font-semibold mb-6 text-blue-600">
+          <h2 className="text-2xl font-semibold mb-6 text-[#0057D3]">
             Why Top Companies Prefer "Adventure Learning"
           </h2>
           <ul className="space-y-3">
             <li>
               <div className="flex items-center">
-                <CheckCircleIcon className="h-5 w-5 text-blue-500 mr-2" />
+                <CheckCircleIcon className="h-5 w-5 text-[#0057D3] mr-2" />
                 <span>High engagement and outcome-centric learning</span>
               </div>
             </li>
             <li>
               <div className="flex items-center">
-                <CheckCircleIcon className="h-5 w-5 text-blue-500 mr-2" />
+                <CheckCircleIcon className="h-5 w-5 text-[#0057D3] mr-2" />
                 <span>Customized curriculum built with industry leaders, for industry leaders</span>
               </div>
             </li>
             <li>
               <div className="flex items-center">
-                <CheckCircleIcon className="h-5 w-5 text-blue-500 mr-2" />
+                <CheckCircleIcon className="h-5 w-5 text-[#0057D3] mr-2" />
                 <span>Hands-on exercises and industry use cases</span>
               </div>
             </li>
             <li>
               <div className="flex items-center">
-                <CheckCircleIcon className="h-5 w-5 text-blue-500 mr-2" />
+                <CheckCircleIcon className="h-5 w-5 text-[#0057D3] mr-2" />
                 <span>Assignments and project work review and feedback from industry SMEs</span>
               </div>
             </li>
             <li>
               <div className="flex items-center">
-                <CheckCircleIcon className="h-5 w-5 text-blue-500 mr-2" />
+                <CheckCircleIcon className="h-5 w-5 text-[#0057D3] mr-2" />
                 <span>Strong reporting to track learning and calculate training ROI for managers</span>
               </div>
             </li>
             <li>
               <div className="flex items-center">
-                <CheckCircleIcon className="h-5 w-5 text-blue-500 mr-2" />
+                <CheckCircleIcon className="h-5 w-5 text-[#0057D3] mr-2" />
                 <span>Pre-configured Cloud Labs for practice</span>
               </div>
             </li>
             <li>
               <div className="flex items-center">
-                <CheckCircleIcon className="h-5 w-5 text-blue-500 mr-2" />
+                <CheckCircleIcon className="h-5 w-5 text-[#0057D3] mr-2" />
                 <span>Day 1 production ready on the completion of the training</span>
               </div>
             </li>
@@ -60,7 +61,7 @@ function WhyAdventureLearning() {
         <div className="relative rounded-md overflow-hidden shadow-md">
           {/* Replace this with your actual image or video component */}
           <img
-            src="https://via.placeholder.com/600x400" // Placeholder image URL
+            src={avd1} // Placeholder image URL
             alt="Adventure Learning in Action"
             className="w-full h-auto"
           />

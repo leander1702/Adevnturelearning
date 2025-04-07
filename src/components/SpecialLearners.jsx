@@ -39,7 +39,7 @@ function SpecialLearners() {
   return (
     <div className="bg-gray-100 py-12">
       <div className="container mx-auto px-4 text-center">
-        <h2 className="text-2xl font-semibold text-indigo-700 mb-2">
+        <h2 className="text-2xl font-semibold text-[#0057D3] mb-2">
           Hire From Our Top level specialized learners
         </h2>
         <p className="text-gray-600 mb-8">Skilled Learners, Ready to Join Your Team.</p>
