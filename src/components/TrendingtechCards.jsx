@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import course1 from '../assets/course1.png';
+import course1 from '../assets/course1.jpg';
 import course2 from '../assets/course2.png';
 import course3 from '../assets/course3.png';
 import course4 from '../assets/course4.png';
@@ -8,13 +8,13 @@ import course6 from '../assets/course6.png';
 import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
 
 const TrendingtechCards = () => {
-  const cards = [
-    { title: "INTERNET OF THINGS", image: course1, desc: "Connect, Innovate & Transform" },
-    { title: "EMBEDDED SYSTEM", image: course2, desc: " From Sensors to Smart Solutions" },
-    { title: "DATA SCIENCE", image: course3, desc: "Unlock the Power of Big Data" },
+  const cards = [   
     { title: "FULL STACK", image: course4, desc: " Full Stack Mastery Starts Here" },
+    { title: "EMBEDDED SYSTEM", image: course2, desc: " From Sensors to Smart Solutions" },
+    { title: "DATA SCIENCE", image: course3, desc: "Unlock the Power of Big Data" },  
     { title: "DATA ANALYTICS", image: course5, desc: "From Data to Actionable Insights" },
     { title: "CLOUD COMPUTING", image: course6, desc: "Elevate Your Tech with the Cloud" },
+    { title: "SOFTWARE TESTING", image: course1, desc: "Quality assurance, debugging, validation" },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);

@@ -1,14 +1,15 @@
 import React from 'react';
+import form2 from '../assets/form2.gif';
 
 function UpskillForm() {
   return (
-    <div className="bg-blue-50 py-12">
-      <div className="container mx-auto px-4">
-        <div className="bg-white rounded-lg shadow-md p-8">
-          <h2 className="text-2xl font-semibold text-[#0057D3] mb-2 text-center">
+    <div className="bg-blue-50 py-12 min-h-screen flex items-center justify-center">
+      <div className="w-full  max-w-4xl px-4">
+        <div className="bg-white w-full lg:w-3/4 md:w-full rounded-lg shadow-md p-8 mx-auto">
+          <h1 className="sm:text-3xl font-semibold text-[#0057D3] mb-2 text-center">
             Transform Your Workforce
-          </h2>
-          <p className="text-gray-600 mb-6 text-center">Write to us for your upskilling needs</p>
+          </h1>
+          <p className="text-lg text-gray-700 mb-6 text-center">Write to us for your upskilling needs</p>
 
           <form className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>

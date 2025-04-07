@@ -33,10 +33,10 @@ function Companies(){
     
     return(
         <>
-        <div className="w-full text-center bg-white mb-5">
-        <h2 className="text-3xl font-semibold text-[#0057D3] mb-6">
+        <div className="w-full text-center bg-white mt-5 mb-5">
+        <h1 className="sm:text-3xl font-semibold text-[#0057D3] mb-6">
           Top Companies use Adventure Learning for their Enterprises
-        </h2>
+        </h1>
           <div className="w-full overflow-hidden  mt-4 sm:py-0 bg-[#F4F9FF]">
             <div className="flex w-max animate-marquee space-x-6 sm:space-x-20 mb-4">
               {[...companies, ...companies].map((company, index) => (
