@@ -8,7 +8,7 @@ import '@fontsource/poppins';
 import Home from "./pages/Home/Home";
 // import Course from "./pages/Courses/Course";
 import ContactAll from "./pages/Contactus/ContactAll";
-import AllBlogs from "./Resources/AllBlogs";
+import AllBlogs from "./pages/Resources/AllBlogs";
 import OnlineTraining from "./pages/OnlineTrain/OnlineTraining";
 import Corporate from "./pages/CorporateTrain/Corporate";
 import { SiConcourse } from "react-icons/si";
