@@ -67,9 +67,9 @@ function Youtubevdo() {
                                     {/* <button className="bg-[#0057D3] border border-white text-white px-5 py-2 rounded-md font-semibold hover:border-[#0057D3] hover:bg-white hover:text-blue-600 transition duration-300">
                           Know More
                         </button> */}
-                                    <div className="flex  items-center text-center ">
-                                        <i class="bi bi-heart-fill text-gray-500 hover:text-gray-600 text-2xl cursor-pointer"></i>
-                                        <i class="bi bi-share-fill text-gray-500 hover:text-gray-600 text-2xl pl-5 cursor-pointer"></i>
+                                    <div className="flex  items-center text-center pt-5 ">
+                                        <i class="bi bi-heart-fill text-gray-500 hover:text-gray-500 text-2xl cursor-pointer"></i>
+                                        <i class="bi bi-share-fill text-gray-500 hover:text-gray-500 text-2xl pl-5 cursor-pointer"></i>
                                     </div>
                                 </div>
                             </div>

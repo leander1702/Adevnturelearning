@@ -36,20 +36,24 @@ const HiringCompanies = () => {
     ];
 
     return (
-        <div className="w-full text-center bg-white mb-5">
+        <div className="w-full text-center lg:py-8 bg-white ">
           <h3
-            className="font-bold inline-flex items-center justify-center rounded-[20px] text-center p-2 px-4 mt-8 text-sm sm:text-base"
+            className="font-bold inline-flex items-center justify-center rounded-[20px] text-center p-2 px-4 lg:text-base "
             style={{ backgroundColor: '#CDD9FF', color: "#0057D3" }}
           >
-            OUR HIRING COMPANIES
+            OUR HIRING COMPANIES  
           </h3>
+          <h1 data-aos="fade-down" className="font-semibold lg:text-3xl  mt-5 text-black">
+          Explore Top Opportunities
+          </h1>
+          
           <div className="w-full overflow-hidden  mt-4 sm:py-0 bg-[#F4F9FF]">
             <div className="flex w-max animate-marquee space-x-6 sm:space-x-20 mb-4">
               {[...companies, ...companies].map((company, index) => (
                 <div key={index} className="transition-transform hover:scale-110">
                   <img
                     src={company.logo}
-                    className="w-16 sm:w-36 mt-3"
+                    className="lg:w-32  lg:pt-4"
                     alt={`${company.name} logo`}
                   />
                 </div>
@@ -58,7 +62,7 @@ const HiringCompanies = () => {
             <div className="flex w-max animate-marquee-reverse space-x-6 sm:space-x-20 ">
               {[...companies, ...companies].map((company, index) => (
                 <div key={index} className="transition-transform hover:scale-110">
-                  <img src={company.logo} className="w-16 sm:w-36 mt-0" alt={`${company.name} logo`} />
+                  <img src={company.logo} className="lg:w-32 lg:pb-4" alt={`${company.name} logo`} />
                 </div>
               ))}
             </div>

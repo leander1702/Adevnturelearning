@@ -1,278 +1,87 @@
-import React, { useState } from "react";
-import card1 from '../assets/card1.jpeg';
-import card2 from '../assets/card2.jpeg';
-import card3 from '../assets/card3.jpeg';
-import card4 from '../assets/card4.jpeg';
-import card5 from '../assets/card5.jpeg';
-import card6 from '../assets/card6.jpeg';
-import card7 from '../assets/card7.jpeg';
-import card8 from '../assets/card8.jpeg';
+import React, { useState } from 'react';
+// import course1 from '../assets/course1.jpg';
+import course2 from '../assets/course2.png';
+import course3 from '../assets/course3.png';
+import course4 from '../assets/course4.png';
+import course5 from '../assets/course5.png';
+import course6 from '../assets/course6.png';
+import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
 
-import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
+const TrendingtechCards = () => {
+  const cards = [   
+    { title: "FULL STACK", image: course4, desc: " Full Stack Mastery Starts Here" },
+    { title: "EMBEDDED SYSTEM", image: course2, desc: " From Sensors to Smart Solutions" },
+    { title: "DATA SCIENCE", image: course3, desc: "Unlock the Power of Big Data" },  
+    { title: "DATA ANALYTICS", image: course5, desc: "From Data to Actionable Insights" },
+    { title: "CLOUD COMPUTING", image: course6, desc: "Elevate Your Tech with the Cloud" },
+    { title: "SOFTWARE TESTING" , image: "https://img.freepik.com/premium-photo/concept-testing-technology-internet-networking_220873-12407.jpg?w=1060", desc: "Quality assurance, debugging, validation" },
+  ];
 
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const cardsPerView = window.innerWidth < 640 ? 1 : 4; // Adjust based on screen size
 
+  const handleNext = () => {
+    if (currentIndex + cardsPerView < cards.length) {
+      setCurrentIndex(currentIndex + 1);
+    }
+  };
 
-const CardCarousel = () => {
-    const cards = [
-        // card1
-        <div className="w-80 flex-none p-4 ml-5 rounded-xl bg-white text-black  border-b-2 border-r-2 border-gray-400"
-            style={{
-                boxShadow: "0px 2px 8px rgba(0, 0, 0, 0.15)" // Custom shadow only on right and bottom
-            }}>
-            <div
-                className="relative -mt-2 h-40 overflow-hidden rounded-xl bg-cover bg-center text-white shadow-lg shadow-blue-gray-500/40"
-                style={{
-                    backgroundImage: `url(${card1})`, // Use the imported image
-                }}
-            ></div>
-            <div className="p-2 w-80">
-                <h5 className="mb-2 font-semibold text-blue-gray-900 text-base">Learn Figma-UI/UX Design Essential Training</h5>
-                <div className="flex items-center text-gray-500 font-bold mb-3 w-80">
-                    <i className="bi bi-journal-bookmark-fill text-sm  ml-1 "></i><span className="font-bold text-sm ml-1">Lesson:6</span>
-                    <i className="bi bi-person-fill text-sm ml-3"></i> <span className="font-bold text-sm ml-1">Students:198</span>
-                    <i className="bi bi-trophy-fill text-sm ml-3"></i> <span className="font-bold text-sm ml-1">Beginner</span>
+  const handlePrev = () => {
+    if (currentIndex > 0) {
+      setCurrentIndex(currentIndex - 1);
+    }
+  };
+
+  return (
+    <div   className="relative overflow-hidden px-2 sm:px-5">
+      <div
+        className="flex transition-transform duration-500 ease-in-out"
+        style={{
+          transform: `translateX(-${(currentIndex / cardsPerView) * 100}%)`,
+        }}
+      >
+        {cards.map((card, index) => (
+          <div
+            key={index}
+            className={`w-full sm:w-1/4 flex-shrink-0 p-2 sm:p-4`} // Adjust width for mobile
+          >
+            <div className="bg-white border border-1 border-gray-300 rounded-lg items-center overflow-hidden text-left shadow-md p-3">
+              <img src={card.image} alt={card.title} className="w-full object-cover rounded-lg" />
+              <div className="p-4">
+                <h3 className="text-base font-semibold mb-2">{card.title}</h3>
+                <p className="font-medium text-sm text-[#0057D3]">{card.desc}</p>
+                <div className="flex flex-col-2 sm:flex-row gap-2 sm:gap-4 mt-3 items-center">
+                  <button className="bg-blue-600 border border-white text-white px-3 py-2 rounded-md font-normal hover:border-[#0057D3] hover:bg-white hover:text-blue-600 transition duration-300">
+                    Demo Class
+                  </button>
+                  <button className="bg-gray-500 border border-white text-white px-3 py-2 rounded-md font-normal hover:border-[#0057D3] hover:bg-white hover:text-blue-600 transition duration-300">
+                    Know More
+                  </button>
                 </div>
-
-                <button className="bg-gray-800 text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 px-4 py-2 rounded-md font-semibold flex items-center">
-                    Start Course
-                    <i className="bi bi-chevron-right ml-2"></i> {/* Icon with margin-left */}
-                </button>
+              </div>
             </div>
-        </div>,
+          </div>
+        ))}
+      </div>
 
-
-
-        // card2
-        <div className="w-80 flex-none p-4 ml-5 rounded-xl bg-white text-gray-700 border-b-2 border-r-2 border-gray-400"
-            style={{
-                boxShadow: "4px 4px 10px rgba(0, 0, 0, 0.15)" // Custom shadow only on right and bottom
-            }}>
-            <div
-                className="relative -mt-2 h-40 overflow-hidden rounded-xl bg-cover bg-center text-white shadow-lg shadow-blue-gray-500/40"
-                style={{
-                    backgroundImage: `url(${card2})`, // Use the imported image
-                }}
-            ></div>
-            <div className="p-2 w-80">
-                <h5 className="mb-2 text-base font-semibold text-black">Python for Beginners - Learn Programming from scratch</h5>
-                <div className="flex items-center text-gray-500 font-bold mb-3 w-80">
-                    <i className="bi bi-journal-bookmark-fill text-sm "></i><span className="font-bold text-sm ml-1">Lesson:6</span>
-                    <i className="bi bi-person-fill text-sm ml-2"></i> <span className="font-bold text-sm ml-1">Students:198</span>
-                    <i className="bi bi-trophy-fill text-sm ml-2"></i> <span className="font-bold text-sm ml-1">Beginner</span>
-                </div>
-                <button className="bg-gray-800 text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 px-4 py-2 rounded-md font-semibold flex items-center">
-                    Start Course
-                    <i className="bi bi-chevron-right ml-2"></i> {/* Icon with margin-left */}
-                </button>
-            </div>
-        </div>,
-
-
-
-        // card3
-        <div className="w-80 flex-none p-4 ml-5 rounded-xl bg-white text-gray-700 border-b-2 border-r-2 border-gray-400"
-            style={{
-                boxShadow: "4px 4px 10px rgba(0, 0, 0, 0.15)" // Custom shadow only on right and bottom
-            }}>
-            <div
-                className="relative -mt-2 h-40 overflow-hidden rounded-xl bg-cover bg-center text-white shadow-lg shadow-blue-gray-500/40"
-                style={{
-                    backgroundImage: `url(${card3})`, // Use the imported image
-                }}
-            ></div>
-            <div className="p-2">
-                <h5 className="mb-2 text-base font-semibold text-black">How to Market Yourself as a Consultant</h5>
-                <div className="flex items-center text-gray-500 font-bold mb-3 w-80">
-                    <i className="bi bi-journal-bookmark-fill text-sm  ml-2 "></i><span className="font-bold text-sm ml-1">Lesson:6</span>
-                    <i className="bi bi-person-fill text-sm ml-2"></i> <span className="font-bold text-sm ml-1">Students:198</span>
-                    <i className="bi bi-trophy-fill text-sm ml-2"></i> <span className="font-bold text-sm ml-1">Beginner</span>
-                </div>
-                <button className="bg-gray-800 text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 px-4 py-2 rounded-md font-semibold flex items-center">
-                    Start Course
-                    <i className="bi bi-chevron-right ml-2"></i> {/* Icon with margin-left */}
-                </button>
-            </div>
-        </div>,
-
-
-
-        // card4
-        <div className="w-80 flex-none p-4 ml-5 rounded-xl bg-white text-gray-700 border-b-2 border-r-2 border-gray-400"
-            style={{
-                boxShadow: "4px 4px 10px rgba(0, 0, 0, 0.15)" // Custom shadow only on right and bottom
-            }}>
-            <div
-                className="relative -mt-2 h-40 overflow-hidden rounded-xl bg-cover bg-center text-white shadow-lg shadow-blue-gray-500/40"
-                style={{
-                    backgroundImage: `url(${card4})`, // Use the imported image
-                }}
-            ></div>
-            <div className="p-2 w-80">
-                <h5 className="mb-2 text-base font-semibold text-black">Mobile App Development with Flutter & Dart (iOS and Android)</h5>
-                <div className="flex items-center text-gray-500 font-bold mb-3 w-80">
-                    <i className="bi bi-journal-bookmark-fill text-sm  ml-2 "></i><span className="font-bold text-sm ml-1">Lesson:6</span>
-                    <i className="bi bi-person-fill text-sm ml-2"></i> <span className="font-bold text-sm ml-1">Students:198</span>
-                    <i className="bi bi-trophy-fill text-sm ml-2"></i> <span className="font-bold text-sm ml-1">Beginner</span>
-                </div>
-                <button className="bg-gray-800 text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 px-4 py-2 rounded-md font-semibold flex items-center">
-                    Start Course
-                    <i className="bi bi-chevron-right ml-2"></i> {/* Icon with margin-left */}
-                </button>
-            </div>
-        </div>,
-
-
-
-        // card5
-        <div className="w-80 flex-none p-4 ml-5 rounded-xl bg-white text-gray-700 border-b-2 border-r-2 border-gray-400"
-            style={{
-                boxShadow: "4px 4px 10px rgba(0, 0, 0, 0.15)" // Custom shadow only on right and bottom
-            }}>
-            <div
-                className="relative -mt-2 h-40 overflow-hidden rounded-xl bg-cover bg-center text-white shadow-lg shadow-blue-gray-500/40"
-                style={{
-                    backgroundImage: `url(${card5})`, // Use the imported image
-                }}
-            ></div>
-            <div className="p-2 w-80">
-                <h5 className="mb-2 text-base font-semibold text-black">Learn Figma-UI/UX Design Essential Training</h5>
-                <div className="flex items-center text-gray-500 font-bold mb-3 w-80">
-                    <i className="bi bi-journal-bookmark-fill text-sm  ml-2 "></i><span className="font-bold text-sm ml-1">Lesson:6</span>
-                    <i className="bi bi-person-fill text-sm ml-2"></i> <span className="font-bold text-sm ml-1">Students:198</span>
-                    <i className="bi bi-trophy-fill text-sm ml-2"></i> <span className="font-bold text-sm ml-1">Beginner</span>
-                </div>
-                <button className="bg-gray-800 text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 px-4 py-2 rounded-md font-semibold flex items-center">
-                    Start Course
-                    <i className="bi bi-chevron-right ml-2"></i> {/* Icon with margin-left */}
-                </button>
-            </div>
-        </div>,
-
-
-
-        // card6
-        <div className="w-80 flex-none p-4 ml-5 rounded-xl bg-white text-gray-700 border-b-2 border-r-2 border-gray-400"
-            style={{
-                boxShadow: "4px 4px 10px rgba(0, 0, 0, 0.15)" // Custom shadow only on right and bottom
-            }}>
-            <div
-                className="relative -mt-2 h-40 overflow-hidden rounded-xl bg-cover bg-center text-white shadow-lg shadow-blue-gray-500/40"
-                style={{
-                    backgroundImage: `url(${card6})`, // Use the imported image
-                }}
-            ></div>
-            <div className="p-2 w-80">
-                <h5 className="mb-2 text-base font-semibold text-black">Python for Beginners - Learn Programming from scratch</h5>
-                <div className="flex items-center text-gray-500 font-bold mb-3 w-80">
-                    <i className="bi bi-journal-bookmark-fill text-sm  ml-2"></i><span className="font-bold text-sm ml-1">Lesson:6</span>
-                    <i className="bi bi-person-fill text-sm ml-2"></i> <span className="font-bold text-sm ml-1">Students:198</span>
-                    <i className="bi bi-trophy-fill text-sm ml-2"></i> <span className="font-bold text-sm ml-1">Beginner</span>
-                </div>
-                <button className="bg-gray-800 text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 px-4 py-2 rounded-md font-semibold flex items-center">
-                    Start Course
-                    <i className="bi bi-chevron-right ml-2"></i> {/* Icon with margin-left */}
-                </button>
-            </div>
-        </div>,
-
-
-
-        // card7
-        <div className="w-80 flex-none p-4 ml-5 rounded-xl bg-white text-gray-700 border-b-2 border-r-2 border-gray-400"
-            style={{
-                boxShadow: "4px 4px 10px rgba(0, 0, 0, 0.15)" // Custom shadow only on right and bottom
-            }}>
-            <div
-                className="relative -mt-2 h-40 overflow-hidden rounded-xl bg-cover bg-center text-white shadow-lg shadow-blue-gray-500/40"
-                style={{
-                    backgroundImage: `url(${card7})`, // Use the imported image
-                }}
-            ></div>
-            <div className="p-2 w-80">
-                <h5 className="mb-2 text-base font-semibold text-black">Mobile App Development with Flutter & Dart </h5>
-                <div className="flex items-center text-gray-500 font-bold mb-3 w-80">
-                    <i className="bi bi-journal-bookmark-fill text-sm  ml-2"></i><span className="font-bold text-sm ml-1">Lesson:6</span>
-                    <i className="bi bi-person-fill text-sm ml-2"></i> <span className="font-bold text-sm ml-1">Students:198</span>
-                    <i className="bi bi-trophy-fill text-sm ml-2"></i> <span className="font-bold text-sm ml-1">Beginner</span>
-                </div>
-                <button className="bg-gray-800 text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 px-4 py-2 rounded-md font-semibold flex items-center">
-                    Start Course
-                    <i className="bi bi-chevron-right ml-2"></i> {/* Icon with margin-left */}
-                </button>
-            </div>
-        </div>,
-
-
-
-        // card8
-        <div className="w-80 flex-none p-4 ml-5 rounded-xl bg-white text-gray-700 border-b-2 border-r-2 border-gray-400"
-            style={{
-                boxShadow: "4px 4px 10px rgba(0, 0, 0, 0.15)" // Custom shadow only on right and bottom
-            }}>
-            <div
-                className="relative -mt-2 h-40 overflow-hidden rounded-xl bg-cover bg-center text-white shadow-lg shadow-blue-gray-500/40"
-                style={{
-                    backgroundImage: `url(${card8})`, // Use the imported image
-                }}
-            ></div>
-            <div className="p-2 w-80">
-                <h5 className="mb-2 text-base font-semibold text-black">Mobile App Development with Flutter & Dart (iOS and Android)</h5>
-                <div className="flex items-center text-gray-500 font-bold mb-3 w-80">
-                    <i className="bi bi-journal-bookmark-fill text-sm  ml-2"></i><span className="font-bold text-sm ml-1">Lesson:6</span>
-                    <i className="bi bi-person-fill text-sm ml-2"></i> <span className="font-bold text-sm ml-1">Students:198</span>
-                    <i className="bi bi-trophy-fill text-sm ml-2"></i> <span className="font-bold text-sm ml-1">Beginner</span>
-                </div>
-                <button className="bg-gray-800 text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 px-4 py-2 rounded-md font-semibold flex items-center">
-                    Start Course
-                    <i className="bi bi-chevron-right ml-2"></i> {/* Icon with margin-left */}
-                </button>
-            </div>
-        </div>
-    ];
-
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const cardsPerView = 4;
-
-    const handleNext = () => {
-        if (currentIndex + cardsPerView < cards.length) {
-            setCurrentIndex(currentIndex + 1); // Move right by one card
-        }
-    };
-
-    const handlePrev = () => {
-        if (currentIndex > 0) {
-            setCurrentIndex(currentIndex - 1); // Move left by one card
-        }
-    };
-
-    return (
-        <div className="relative w-full overflow-hidden bg-[#F5F5F5]" >
-            <div
-                className="flex transition-transform duration-500 ease-in-out"
-                style={{
-                    transform: `translateX(-${(currentIndex / cardsPerView) * 100}%)`,
-                }}
-            >
-                {cards}
-            </div>
-
-            {/* Navigation Arrows */}
-            <div className="absolute top-0 left-0 right-0 flex justify-between items-center mt-32 px-4">
-                <button
-                    onClick={handlePrev}
-                    className="text-white bg-blue-500 hover:bg-blue-600 p-2 rounded-full shadow-md transition-colors duration-300"
-                >
-                    <BsArrowLeft size={24} />
-                </button>
-                <button
-                    onClick={handleNext}
-                    className="text-white bg-blue-500 hover:bg-blue-600 p-2 rounded-full shadow-md transition-colors duration-300"
-                >
-                    <BsArrowRight size={24} />
-                </button>
-            </div>
-        </div>
-    );
+      <div className="absolute top-1/2 left-0 right-0 transform -translate-y-1/2 flex justify-between px-4">
+        <button
+          onClick={handlePrev}
+          className={`text-white bg-blue-500 hover:bg-blue-600 p-2 rounded-full shadow-md transition-colors duration-300 ${currentIndex === 0 ? 'opacity-50 cursor-not-allowed' : ''}`}
+          disabled={currentIndex === 0}
+        >
+          <BsArrowLeft size={24} />
+        </button>
+        <button
+          onClick={handleNext}
+          className={`text-white bg-blue-500 hover:bg-blue-600 p-2 rounded-full shadow-md transition-colors duration-300 ${currentIndex + cardsPerView >= cards.length ? 'opacity-50 cursor-not-allowed' : ''}`}
+          disabled={currentIndex + cardsPerView >= cards.length}
+        >
+          <BsArrowRight size={24} />
+        </button>
+      </div>
+    </div>
+  );
 };
 
-export default CardCarousel;
+export default TrendingtechCards;

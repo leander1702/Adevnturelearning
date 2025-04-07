@@ -13,7 +13,7 @@ function LearnerToExpert() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Industry-Level Training Card */}
-          <div className="bg-white rounded-lg shadow-lg p-8 text-center transition-transform transform hover:scale-105 hover:shadow-xl duration-300">
+          <div className="bg-white rounded-lg shadow-lg  p-8 text-center transition-transform transform hover:scale-105 hover:shadow-xl duration-300">
             <h3 className="text-xl font-semibold text-[#0057D3] mb-4">
               Industry-Level Training
             </h3>

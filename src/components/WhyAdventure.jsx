@@ -15,18 +15,18 @@ const features = [
 
 function WhyAdventure() {
     return (
-        <div className="text-center py-8 sm:py-10 bg-gray-100">
+        <div className="text-center lg:py-8 bg-gray-100 ">
             {/* Title */}
             <h3 data-aos="fade-up"
-                className="font-bold inline-flex items-center justify-center rounded-full text-center p-2 px-4 sm:px-5 text-sm sm:text-base"
+                className="font-bold inline-flex items-center justify-center rounded-full   p-2 px-4  lg:text-base "
                 style={{ backgroundColor: '#CDD9FF', color: "#0057D3" }}
             >
                 WHY ADVENTURE ?
             </h3>
-            <h1 data-aos="fade-up" className="pt-4 sm:pt-5 px-3 font-semibold text-2xl sm:text-3xl  text-center text-[#0057D3]">
+            <h1 data-aos="fade-up" className="pt-4 font-semibold lg:text-3xl   text-black">
                 Shape Your Future Through Learning
             </h1>
-            <h4 className=" pt-4 sm:pt-5 px-10 font-normal text-base sm:text-lg  text-gray-600 text-center">
+            <h4 className=" pt-4  font-normal lg:text-lg text-gray-600 text-center ">
                 Adventure Learning equips you with tools to shape your future
             </h4>
 

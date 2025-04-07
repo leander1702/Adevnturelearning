@@ -7,13 +7,13 @@ function LookingFor() {
     <>
       <div className="text-center pt-12 pb-10 bg-blue-100">
         <div>
-          <h1 data-aos="fade-down" className="font-semibold text-2xl sm:text-3xl mt-5 text-[#0057D3]">
-            Hey Learners, Welcome to Adventure Learning!
+          <h1 data-aos="fade-down" className="font-semibold lg:text-3xl  mt-5 text-black">
+            Hey Learners, Welcome to <span className='text-[#0057D3] '>Adventure Learning!</span>
           </h1>
         </div>
 
         <div className="p-4">
-          <h4 className="font-normal text-base sm:text-lg text-gray-600 text-center">
+          <h4 className="font-normal lg:text-lg text-gray-600 text-center">
             What Are You Looking For?
           </h4>
         </div>

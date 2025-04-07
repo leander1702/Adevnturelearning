@@ -34,11 +34,10 @@ function TestimonialReview() {
                     {/* Duplicating reviews to make smooth infinite animation */}
                     {[...reviews, ...reviews].map((review, index) => (
                         <div key={index} className="text-center w-60 p-3 bg-white shadow-2xl rounded-lg transition-transform transform hover:scale-105">
-                            <img
-                                className="w-20 h-20 rounded-full mx-auto object-cover"
-                                src={review.img}
+                           
+                                <i class="bi bi-person-circle lg:text-6xl text-[#0057D3] "></i>
                                 
-                            />
+                       
                             <h3 className="text-lg font-semibold mt-3">{review.name}</h3>
                             <div className="text-yellow-500 text-xl mt-1">
                                 ★★★★★

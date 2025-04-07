@@ -11,14 +11,12 @@ import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
 
 function Coursecard() {
     const cards = [
-        { title: "Figma-UI/UX Design Essential Training", image: card1, lesson: 6, students: 198, category: "Beginner" },
-        { title: "Python for Beginners - Learn Programming from scratch", image: card2, lesson: 21, students: 99, category: "Advanced" },
-        { title: "How to Market Yourself as a Consultant", image: card3, lesson: 33, students: 64, category: "Beginner" },
-        { title: "Mobile App Development with Flutter & Dart (iOS and Android)", image: card4, lesson: 15, students: 215, category: "Beginner" },
-        { title: "Learn Figma-UI/UX Design Essential Training", image: card5, lesson: 6, students: 198, category: "Beginner" },
-        { title: "Mobile App Development with Flutter & Dart (iOS and Android)", image: card6, lesson: 15, students: 215, category: "Beginner" },
-        { title: "Python for Beginners - Learn Programming from scratch", image: card7, lesson: 21, students: 99, category: "Advanced" },
-        { title: "How to Market Yourself as a Consultant", image: card8, lesson: 6, students: 198, category: "beginner" },
+        { title: "Full Stack Development: Master the Art of Building Web Applications", image: card1, lesson: 6, students: 198, category: "Beginner" },
+        { title: "Embedded Systems: From Basics to Advanced Applications", image: card2, lesson: 21, students: 99, category: "Advanced" },
+        { title: "Data Science: Mastering Data Analysis and Machine Learning", image: card3, lesson: 33, students: 64, category: "Beginner" },
+        { title: "Data Analytics: Unlocking Insights from Data", image: card4, lesson: 15, students: 215, category: "Beginner" },
+        { title: "Cloud Computing: Building Scalable and Flexible Solutions", image: card5, lesson: 6, students: 198, category: "Beginner" },
+        { title: "Software Testing: Ensuring Quality and Reliability in Software Development", image: card6, lesson: 15, students: 215, category: "Beginner" },       
     ];
 
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -48,14 +46,14 @@ function Coursecard() {
                         key={index}
                         className={`w-full sm:w-1/4 flex-shrink-0 p-2 sm:p-4`} // Adjust width for mobile
                     >
-                        <div className="bg-white w-3/4 ml-12 sm:ml-0 sm:w-full rounded-lg p-4 shadow-lg"  style={{ boxShadow: 'rgba(0, 0, 0, 0.30) 2.4px 2.4px 3.2px' }}>
+                        <div className="bg-white w-3/4 ml-12 sm:ml-0 sm:w-full rounded-lg p-4 shadow-lg"  style={{ boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px' }}>
                             <img
                                 src={card.image}
                                 alt={card.title}
                                 className="w-64 mx-auto mb-3 transition-transform transform"
                             />
-                            <h3 className="font-bold text-sm mt-3 mb-3 truncate">{card.title}</h3>
-                            <div className="flex items-center justify-center text-gray-500 font-bold mb-3 space-x-2 text-xs">
+                            <h3 className="font-semibold text-sm mt-3 mb-3 truncate">{card.title}</h3>
+                            <div className="flex items-center justify-center text-gray-500 font-semibold mb-3 space-x-2 text-xs">
                                 <div className="flex items-center">
                                     <i className="bi bi-journal-bookmark-fill text-sm"></i>
                                     <span className="ml-1">Lesson: {card.lesson}</span>

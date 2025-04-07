@@ -52,7 +52,7 @@ const Form = () => {
       <div className="max-w-5xl w-full bg-white shadow-xl rounded-2xl overflow-hidden flex flex-col md:flex-row">
         {/* Left Section */}
         <div className="w-full md:w-1/2 p-6 md:p-8 bg-gradient-to-br from-blue-100 to-blue-50">
-          <h2 className="text-2xl md:text-3xl font-semibold text-[#0057D3] mb-4 md:mb-6">
+          <h2 className="lg:text-3xl font-semibold text-[#0057D3] mb-4 md:mb-6">
             Don't Worry, Just Simple<span className="block">Step To Enroll</span>
           </h2>
           <p className="text-sm md:text-base text-gray-700 font-medium mb-4 md:mb-6">

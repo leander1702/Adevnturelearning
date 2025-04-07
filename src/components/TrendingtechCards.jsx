@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import course1 from '../assets/course1.jpg';
+// import course1 from '../assets/course1.jpg';
 import course2 from '../assets/course2.png';
 import course3 from '../assets/course3.png';
 import course4 from '../assets/course4.png';
@@ -14,7 +14,7 @@ const TrendingtechCards = () => {
     { title: "DATA SCIENCE", image: course3, desc: "Unlock the Power of Big Data" },  
     { title: "DATA ANALYTICS", image: course5, desc: "From Data to Actionable Insights" },
     { title: "CLOUD COMPUTING", image: course6, desc: "Elevate Your Tech with the Cloud" },
-    { title: "SOFTWARE TESTING", image: course1, desc: "Quality assurance, debugging, validation" },
+    { title: "SOFTWARE TESTING" , image: "https://img.freepik.com/premium-photo/concept-testing-technology-internet-networking_220873-12407.jpg?w=1060", desc: "Quality assurance, debugging, validation" },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
