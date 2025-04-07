@@ -1,9 +1,11 @@
 import React from 'react';
+import train1 from '../assets/train1.png'
 function CorporateTraining(){
+
 
     return(
         <>
- <div className="bg-gray-100 py-16">
+ <div className="bg-gray-100 ">
       {/* Hero Section */}
       <div className="bg-gradient-to-b from-gray-800 to-gray-700 text-white py-24 text-center">
         <div className="container mx-auto px-4">
@@ -20,7 +22,7 @@ function CorporateTraining(){
 
       {/* Program Delivery Section */}
       <div className="container mx-auto px-4 py-16">
-        <h2 className="text-2xl font-semibold text-gray-800 mb-8 text-center">
+        <h2 className="text-2xl sm:text-3xl font-semibold text-[#0057D3] mb-8 text-center">
           Programs delivered as per your training needs
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -28,10 +30,8 @@ function CorporateTraining(){
           <div className="bg-white rounded-lg shadow-md p-6 flex flex-col items-center justify-center">
             <div className="w-16 h-16 flex items-center justify-center text-blue-500 text-3xl mb-4">
               {/* Replace with your On Premises Icon (e.g., using a library like Heroicons) */}
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-10 h-10">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-4.036 12.858-8.964 12.858-4.928 0-8.964-5.716-8.964-12.858 0-7.142 4.036-12.858 8.964-12.858 4.928 0 8.964 5.716 8.964 12.858z" />
-              </svg>
+              <img src={train1} className="w-10 h-10" />
+                
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 -ml-2 -mb-2">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .857.546 1.575 1.255 1.856l3.285 1.8c.341.2-.675.2-1.016 0l-3.285-1.8a2.25 2.25 0 01-1.255-1.856V9.75z" />
               </svg>
