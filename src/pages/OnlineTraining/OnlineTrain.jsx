@@ -1,4 +1,4 @@
-import OnlineTraining from "../components/OnlineTaining";
+import OnlineTraining from "../../components/OnlineTaining";
 
 function OnlineTrain(){
     
