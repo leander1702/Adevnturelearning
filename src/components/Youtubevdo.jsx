@@ -58,7 +58,7 @@ function Youtubevdo() {
                                 <div className='flex pb-3  justify-around'>
                                     <p className='text-white  justify-center items-center text-base flex rounded-full bg-blue-500 w-12 h-12'>AL</p>
                                     <p className="font-semibold text-base   text-black">{card.title}<spna className="block text-gray-600 text-sm font-bold">{card.date}</spna></p>                                    
-                                    <i class="bi bi-three-dots-vertical  text-gray-500 text-2xl "></i>
+                                    <i class="bi bi-three-dots-vertical  text-gray-500 text-[22px] "></i>
                                 </div>
                                 <img src={card.image} alt={card.title} className="w-full  object-cover  " />
                                 <div className="p-4">
@@ -68,8 +68,8 @@ function Youtubevdo() {
                           Know More
                         </button> */}
                                     <div className="flex  items-center text-center pt-5 ">
-                                        <i class="bi bi-heart-fill text-gray-500 hover:text-gray-500 text-2xl cursor-pointer"></i>
-                                        <i class="bi bi-share-fill text-gray-500 hover:text-gray-500 text-2xl pl-5 cursor-pointer"></i>
+                                        <i class="bi bi-heart-fill text-gray-500 hover:text-gray-500 text-[22px] cursor-pointer"></i>
+                                        <i class="bi bi-share-fill text-gray-500 hover:text-gray-500 text-[22px] pl-5 cursor-pointer"></i>
                                     </div>
                                 </div>
                             </div>
