@@ -10,9 +10,9 @@ const CourseOverview = () => {
           COURSE DESCRIPTION
         </h2>
         <p className="text-md text-gray-700 leading-relaxed">
-          This course covers the essentials of Full-Stack Development, equipping you with the skills to build dynamic,
-          responsive web applications from start to finish. You'll learn both frontend and backend technologies, including
-          databases, APIs, and deployment strategies.
+        This course covers the essentials of Data Analytics, equipping you with the skills to analyze and 
+        interpret complex data from start to finish. You'll learn key techniques in data collection, cleaning, exploration, statistical analysis, and visualization, 
+        along with tools for working with databases, data manipulation, and deploying analytics solutions.
         </p>
       </div>
 
@@ -24,31 +24,33 @@ const CourseOverview = () => {
         <ul className="space-y-4 list-inside text-gray-700 text-md">
           <li className="flex items-start">
             <CheckCircleIcon className="h-6 w-6 text-[#0057D3] mr-3 flex-shrink-0" />
-            Frontend Development: HTML, CSS, JavaScript, and frameworks like React or Angular.
+            Data Manipulation & Cleaning: Using tools like Python (Pandas, NumPy) to
+             clean and manipulate datasets for analysis.
           </li>
           <li className="flex items-start">
             <CheckCircleIcon className="h-6 w-6 text-blue-600 mr-3 flex-shrink-0" />
-            Backend Development: Node.js, Express, Python (Django/Flask), or Java (Spring Boot).
+            Data Visualization: Creating meaningful visualizations using tools like Tableau, 
+            Power BI, or libraries like Matplotlib and Seaborn in Python.
           </li>
           <li className="flex items-start">
             <CheckCircleIcon className="h-6 w-6 text-blue-600 mr-3 flex-shrink-0" />
-            Databases: SQL (MySQL, PostgreSQL) and NoSQL (MongoDB).
+            Statistical Analysis: Applying statistical techniques with Python (SciPy, StatsModels) to analyze datasets and derive insights.
           </li>
           <li className="flex items-start">
             <CheckCircleIcon className="h-6 w-6 text-blue-600 mr-3 flex-shrink-0" />
-            APIs: Building and consuming RESTful APIs and GraphQL.
+            Data APIs: Extracting data through APIs and working with JSON and RESTful APIs for data fetching and integration.
           </li>
           <li className="flex items-start">
             <CheckCircleIcon className="h-6 w-6 text-blue-600 mr-3 flex-shrink-0" />
-            Version Control: Git and GitHub for code management.
+            Version Control: Using Git and GitHub for managing data analysis projects and collaborating with teams.
           </li>
           <li className="flex items-start">
             <CheckCircleIcon className="h-6 w-6 text-blue-600 mr-3 flex-shrink-0" />
-            Deployment: Hosting applications on cloud platforms (AWS, Heroku) and using Docker.
+            Data Deployment: Deploying data models and analytics dashboards on platforms like AWS, Heroku, or using Docker for containerization.
           </li>
           <li className="flex items-start">
             <CheckCircleIcon className="h-6 w-6 text-blue-600 mr-3 flex-shrink-0" />
-            Best Practices: Authentication, security, debugging, and testing.
+            Best Practices: Ensuring data integrity, security, effective data visualization, and proper documentation.
           </li>
         </ul>
       </div>
@@ -61,8 +63,7 @@ const CourseOverview = () => {
         <div className="flex items-start mb-4">
           <CheckCircleIcon className="h-6 w-6 text-blue-600 mr-3 flex-shrink-0" />
           <p className="text-mg text-gray-700">
-            Aspiring web developers, software engineers, or anyone interested in mastering both the client and server sides of web
-            development.
+          Aspiring data analysts, business analysts, or anyone interested in learning how to analyze data, uncover trends, and generate insights for better decision-making.
           </p>
         </div>
       </div>
@@ -75,7 +76,7 @@ const CourseOverview = () => {
         <div className="flex items-start mb-4">
           <CheckCircleIcon className="h-6 w-6 text-blue-600 mr-3 flex-shrink-0" />
           <p className="text-md text-gray-700">
-            By the end of the course, you'll be able to design, develop, and deploy full-stack web applications independently.
+          By the end of the course, you'll be able to collect, clean, and analyze data, visualize findings, and apply statistical techniques to draw meaningful conclusions and support business decisions.
           </p>
         </div>
       </div>

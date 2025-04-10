@@ -8,33 +8,33 @@ function Footer() {
             <div className="container mx-auto px-4 grid grid-cols-1  sm:grid-cols-2 md:grid-cols-4 gap-2">
                 {/* Explore Section */}
                 <div>
-                    <h3 className="font-bold text-base sm:text-lg text-black mb-2 sm:mb-4">Explore</h3>
+                    <h3 className="font-bold text-base sm:text-lg text-white mb-2 sm:mb-4">Explore</h3>
                     <ul className="space-y-1 sm:space-y-2 text-sm">
-                        <li><a href="#" className="hover:text-gray-300">Home</a></li>
-                        <li><a href="#" className="hover:text-gray-300">Courses</a></li>
-                        <li><a href="#" className="hover:text-gray-300">Online Training</a></li>
+                        <li><a href="/" className="hover:text-gray-300">Home</a></li>
+                        <li><a href="/course/full-stack" className="hover:text-gray-300">Courses</a></li>
+                        <li><a href="/onlinetraining" className="hover:text-gray-300">Online Training</a></li>
                         <li><a href="#" className="hover:text-gray-300">Hire From us</a></li>
                         <li><a href="#" className="hover:text-gray-300">Become an Instructor</a></li>
-                        <li><a href="#" className="hover:text-gray-300">Contact</a></li>
+                        <li><a href="/contact" className="hover:text-gray-300">Contact</a></li>
                     </ul>
                 </div>
 
                 {/* Trending Courses Section */}
                 <div>
-                    <h3 className="font-bold text-base sm:text-lg text-black mb-2 sm:mb-4">Trending Courses</h3>
+                    <h3 className="font-bold text-base sm:text-lg text-white mb-2 sm:mb-4">Trending Courses</h3>
                     <ul className="space-y-1 sm:space-y-2 text-sm">
-                        <li><a href="#" className="hover:text-gray-300">Full Stack</a></li>
-                        <li><a href="#" className="hover:text-gray-300">Embedded System</a></li>
-                        <li><a href="#" className="hover:text-gray-300">Data Science</a></li>
-                        <li><a href="#" className="hover:text-gray-300">Cloud Computing</a></li>
-                        <li><a href="#" className="hover:text-gray-300">Software Testing</a></li>
-                        <li><a href="#" className="hover:text-gray-300">Data Analytics</a></li>
+                        <li><a href="/course/full-stack" className="hover:text-gray-300">Full Stack</a></li>
+                        <li><a href="/course/embedded-system" className="hover:text-gray-300">Embedded System</a></li>
+                        <li><a href="/course/data-science" className="hover:text-gray-300">Data Science</a></li>
+                        <li><a href="/course/cloud-computing" className="hover:text-gray-300">Cloud Computing</a></li>
+                        <li><a href="/course/software-testing" className="hover:text-gray-300">Software Testing</a></li>
+                        <li><a href="/course/data-analytics" className="hover:text-gray-300">Data Analytics</a></li>
                     </ul>
                 </div>
 
                 {/* All Categories Section */}
                 <div>
-                    <h3 className="font-bold text-base sm:text-lg text-black mb-2 sm:mb-4">All Categories</h3>
+                    <h3 className="font-bold text-base sm:text-lg text-white mb-2 sm:mb-4">All Categories</h3>
                     <ul className="space-y-1 sm:space-y-2 text-sm">
                         <li><a href="#" className="hover:text-gray-300">Our Technology</a></li>
                         <li><a href="#" className="hover:text-gray-300">Our Top Class Courses</a></li>
@@ -48,7 +48,7 @@ function Footer() {
 
                 {/* Contact Us Section */}
                 <div>
-                    <h3 className="font-bold text-base sm:text-lg text-black mb-2 sm:mb-4">Contact Us</h3>
+                    <h3 className="font-bold text-base sm:text-lg text-white mb-2 sm:mb-4">Contact Us</h3>
                     <div className="space-y-4">
                         <div className="flex items-start">
                             <i className="bi bi-telephone text-xl sm:text-2xl"></i>
@@ -83,7 +83,7 @@ function Footer() {
                         <p className="text-xs sm:text-sm mt-2">As we are a leader in the Technology Development, Training and R&D Services. Our <span className='sm:block '> responsibility is to empower Education through the knowledge transformation for better Wisdom society.</span></p>
                     </div>
                     <div>
-                        <h3 className="font-bold text-base sm:text-lg text-black mb-2">Follow us</h3>
+                        <h3 className="font-bold text-base sm:text-lg text-white mb-2">Follow us</h3>
                         <div className="flex items-center space-x-4">
                             <a href="#" className="bg-[#3275fc] text-white rounded-full p-2">
                                 <FaFacebookF size={20} />

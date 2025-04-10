@@ -42,103 +42,105 @@ const AccordionList = ({ items }) => {
 const AccordionComponent = () => {
   const accordionItems = [
     {
-      title: 'Introduction to Full Stack Development',
+      title: 'Introduction to Data Science',
       steps: [
-        'Understand the role of a Full Stack Developer.',
-        'Learn about the layers of a web application: Front-end, Back-end, Database.',
-        'Overview of technologies used in the course.',
-        'Set up your development environment.',
-        'Learn best practices for clean and maintainable code.',
+        'Understand the role of a Data Scientist.',
+        'Learn about the key components of Data Science: Data Collection, Analysis, and Visualization.',
+        'Overview of technologies and tools used in the course.',
+        'Set up your data science environment with tools like Python, Jupyter Notebooks, and libraries like Pandas and NumPy.',
+        'Learn best practices for clean, efficient, and reproducible data analysis.',
       ],
       icon: <GlobeAltIcon className="h-6 w-6 text-blue-500" />,
     },
     {
-      title: 'Core Java Fundamentals',
+      title: 'Core Python for Data Science',
       steps: [
-        'Learn data types, variables, and operators.',
-        'Understand control flow statements.',
-        'Explore Object-Oriented Programming (OOP) concepts.',
-        'Learn about classes, objects, inheritance, and polymorphism.',
-        'Handle exceptions in Java.',
+        'Learn Python programming basics for data analysis.',
+        'Understand data types, variables, and operators in Python.',
+        'Explore Python libraries like Pandas for data manipulation.',
+        'Learn how to handle missing data, filter, and manipulate datasets.',
+        'Work with data structures and perform operations on datasets.',
       ],
       icon: <CpuChipIcon className="h-6 w-6 text-green-500" />,
     },
     {
-      title: 'Advanced Java Concepts',
+      title: 'Advanced Data Science Concepts',
       steps: [
-        'Explore multithreading and concurrency.',
-        'Learn about the Collections Framework.',
-        'Understand I/O operations.',
-        'Learn network programming in Java.',
-        'Explore design patterns and best practices.',
+        'Explore multivariate analysis and feature engineering.',
+        'Learn about advanced statistical methods and hypothesis testing.',
+        'Understand machine learning algorithms (Supervised and Unsupervised).',
+        'Explore deep learning techniques and neural networks.',
+        'Learn how to evaluate model performance and interpret results.',
       ],
       icon: <CodeBracketIcon className="h-6 w-6 text-purple-500" />,
     },
     {
-      title: 'Front-End Development',
+      title: 'Data Visualization',
       steps: [
-        'Learn HTML for structuring web content.',
-        'Style web pages with CSS.',
-        'Add interactivity with JavaScript.',
-        'Learn responsive web design.',
-        'Explore modern JavaScript frameworks like React.',
+        'Learn the basics of data visualization using libraries like Matplotlib and Seaborn.',
+        'Explore interactive data visualizations with Plotly and Dash.',
+        'Understand best practices for creating meaningful, impactful charts.',
+        'Visualize different data types: time series, categorical, geographical.',
+        'Learn how to present your data insights effectively to stakeholders.',
       ],
       icon: <GlobeAltIcon className="h-6 w-6 text-yellow-500" />,
     },
     {
-      title: 'Back-End Development with Java',
+      title: 'Machine Learning with Python',
       steps: [
-        'Build back-end applications using Java and Spring Boot.',
-        'Create RESTful APIs.',
-        'Handle database interactions.',
-        'Implement authentication and authorization.',
-        'Deploy applications to production environments.',
+        'Understand the fundamentals of machine learning: classification, regression, clustering.',
+        'Learn how to implement machine learning models using scikit-learn.',
+        'Perform data preprocessing, model training, and evaluation.',
+        'Understand model selection, cross-validation, and hyperparameter tuning.',
+        'Build and deploy machine learning models for real-world applications.',
       ],
       icon: <RocketLaunchIcon className="h-6 w-6 text-pink-500" />,
     },
     {
-      title: 'Full-Stack Integration',
+      title: 'Deep Learning & Neural Networks',
       steps: [
-        'Connect React front-end to Java back-end using RESTful APIs.',
-        'Understand data flow and state management.',
-        'Handle asynchronous operations.',
-        'Build complete full stack web applications.',
+        'Learn about neural networks and the architecture behind deep learning.',
+        'Understand different types of deep learning models: CNNs, RNNs, GANs.',
+        'Implement deep learning models using TensorFlow and Keras.',
+        'Train models for tasks like image recognition and natural language processing.',
+        'Evaluate model performance and optimize deep learning systems.',
       ],
       icon: <RocketLaunchIcon className="h-6 w-6 text-pink-500" />,
     },
     {
-      title: 'Version Control & DevOps Basics',
+      title: 'Version Control & Collaboration',
       steps: [
-        'Master version control with Git.',
+        'Master version control with Git and GitHub for data science projects.',
         'Learn Git workflows, branching, and merging.',
-        'Understand DevOps practices.',
-        'Automate build, test, and deployment with Jenkins and Docker.',
-        'Prepare for professional development environments.',
+        'Collaborate on data science projects using GitHub repositories.',
+        'Understand the importance of documentation and reproducibility in data science.',
+        'Learn best practices for working in teams and managing projects.',
       ],
       icon: <RocketLaunchIcon className="h-6 w-6 text-gray-500" />,
     },
     {
       title: 'Final Capstone Project & Deployment',
       steps: [
-        'Plan and design a real-world capstone project.',
-        'Develop a complete web application.',
-        'Apply best practices for production-ready applications.',
-        'Deploy the application to cloud platforms like AWS or Heroku.',
-        'Showcase your full stack capabilities.',
+        'Plan and design a real-world data science project.',
+        'Clean, preprocess, and analyze a large dataset.',
+        'Build machine learning models and evaluate them.',
+        'Deploy your model as an API using tools like Flask or FastAPI.',
+        'Showcase your data science skills and present your findings.',
       ],
       icon: <CloudIcon className="h-6 w-6 text-teal-500" />,
     },
   ];
+  
 
   return (
     <div className="container-fluid mx-auto my-10">
-       <div className={`grid grid-cols-1 md:grid-cols-2 gap-4  p-10 rounded-md `}>
+       <div className={`grid grid-cols-1 md:grid-cols-0 gap-4  p-10 rounded-md `}>
          <div className='bg-white rounded-md '>
                 <AccordionList items={accordionItems} />
          </div>
-         <div className=' bg-inherit   flex items-center justify-center'>
+         {/* <div className=' bg-inherit   flex items-center justify-center'>
              <img src={img1} alt="" className='w-96 h-96' />
-         </div>
+         </div> */}
      
        </div>
     </div>

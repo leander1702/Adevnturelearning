@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 // import course1 from '../assets/course1.jpg';
 import course2 from '../assets/course2.png';
 import course3 from '../assets/course3.png';
@@ -19,6 +20,11 @@ const TrendingtechCards = () => {
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const cardsPerView = window.innerWidth < 640 ? 1 : 4; // Adjust based on screen size
+  const navigate = useNavigate();
+
+  const handleButtonClick=()=>{    
+    navigate('/contact');
+  };
 
   const handleNext = () => {
     if (currentIndex + cardsPerView < cards.length) {
@@ -33,7 +39,7 @@ const TrendingtechCards = () => {
   };
 
   return (
-    <div   className="relative overflow-hidden px-2 sm:px-5">
+    <div   className="relative overflow-hidden px-5">
       <div
         className="flex transition-transform duration-500 ease-in-out"
         style={{
@@ -43,7 +49,7 @@ const TrendingtechCards = () => {
         {cards.map((card, index) => (
           <div
             key={index}
-            className={`w-full sm:w-1/4 flex-shrink-0 p-2 sm:p-4`} // Adjust width for mobile
+            className={`w-full lg:w-1/4 flex-shrink-0 p-2 sm:p-4`} // Adjust width for mobile
           >
             <div className="bg-white border border-1 border-gray-300 rounded-lg items-center overflow-hidden text-left shadow-md p-3">
               <img src={card.image} alt={card.title} className="w-full object-cover rounded-lg" />
@@ -51,10 +57,10 @@ const TrendingtechCards = () => {
                 <h3 className="text-base font-semibold mb-2">{card.title}</h3>
                 <p className="font-medium text-sm text-[#0057D3]">{card.desc}</p>
                 <div className="flex flex-col-2 sm:flex-row gap-2 sm:gap-4 mt-3 items-center">
-                  <button className="bg-blue-600 border border-white text-white px-3 py-2 rounded-md font-normal hover:border-[#0057D3] hover:bg-white hover:text-blue-600 transition duration-300">
+                  <button className="bg-blue-600 border text-sm font-semibold border-white text-white px-3 py-2 rounded-md  hover:border-[#0057D3] hover:bg-white hover:text-blue-600 transition duration-300" onClick={handleButtonClick}>
                     Demo Class
                   </button>
-                  <button className="bg-gray-500 border border-white text-white px-3 py-2 rounded-md font-normal hover:border-[#0057D3] hover:bg-white hover:text-blue-600 transition duration-300">
+                  <button className="bg-gray-500 border text-sm font-semibold  border-white text-white px-3 py-2 rounded-md  hover:border-[#0057D3] hover:bg-white hover:text-blue-600 transition duration-300" onClick={handleButtonClick} >
                     Know More
                   </button>
                 </div>

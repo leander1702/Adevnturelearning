@@ -42,103 +42,104 @@ const AccordionList = ({ items }) => {
 const AccordionComponent = () => {
   const accordionItems = [
     {
-      title: 'Introduction to Full Stack Development',
+      title: 'Introduction to Embedded Systems',
       steps: [
-        'Understand the role of a Full Stack Developer.',
-        'Learn about the layers of a web application: Front-end, Back-end, Database.',
-        'Overview of technologies used in the course.',
-        'Set up your development environment.',
-        'Learn best practices for clean and maintainable code.',
+        'Understand the role of an Embedded System Developer.',
+        'Learn about the key components of embedded systems: microcontrollers, sensors, actuators.',
+        'Overview of embedded system architectures.',
+        'Set up your embedded system development environment.',
+        'Learn best practices for designing efficient embedded systems.',
       ],
       icon: <GlobeAltIcon className="h-6 w-6 text-blue-500" />,
     },
     {
-      title: 'Core Java Fundamentals',
+      title: 'Core Embedded Systems Concepts',
       steps: [
-        'Learn data types, variables, and operators.',
-        'Understand control flow statements.',
-        'Explore Object-Oriented Programming (OOP) concepts.',
-        'Learn about classes, objects, inheritance, and polymorphism.',
-        'Handle exceptions in Java.',
+        'Learn about data types, variables, and operators in Embedded C.',
+        'Understand control flow statements for real-time systems.',
+        'Explore the fundamentals of real-time operating systems (RTOS).',
+        'Learn about memory management in embedded systems.',
+        'Understand GPIO (General Purpose Input/Output) and its applications.',
       ],
       icon: <CpuChipIcon className="h-6 w-6 text-green-500" />,
     },
     {
-      title: 'Advanced Java Concepts',
+      title: 'Advanced Embedded Systems Design',
       steps: [
-        'Explore multithreading and concurrency.',
-        'Learn about the Collections Framework.',
-        'Understand I/O operations.',
-        'Learn network programming in Java.',
-        'Explore design patterns and best practices.',
+        'Learn about embedded system power management techniques.',
+        'Explore interrupt handling and event-driven programming.',
+        'Understand multithreading and concurrency in embedded systems.',
+        'Learn I/O interfacing with sensors, motors, and other peripherals.',
+        'Explore debugging techniques and tools for embedded systems.',
       ],
       icon: <CodeBracketIcon className="h-6 w-6 text-purple-500" />,
     },
     {
-      title: 'Front-End Development',
+      title: 'Embedded C Programming',
       steps: [
-        'Learn HTML for structuring web content.',
-        'Style web pages with CSS.',
-        'Add interactivity with JavaScript.',
-        'Learn responsive web design.',
-        'Explore modern JavaScript frameworks like React.',
+        'Learn the syntax and structure of Embedded C.',
+        'Write low-level code to control hardware peripherals.',
+        'Implement communication protocols like UART, SPI, I2C.',
+        'Use timers, counters, and PWM in embedded applications.',
+        'Learn how to optimize C code for embedded systems.',
       ],
       icon: <GlobeAltIcon className="h-6 w-6 text-yellow-500" />,
     },
     {
-      title: 'Back-End Development with Java',
+      title: 'Microcontroller Programming & Interfacing',
       steps: [
-        'Build back-end applications using Java and Spring Boot.',
-        'Create RESTful APIs.',
-        'Handle database interactions.',
-        'Implement authentication and authorization.',
-        'Deploy applications to production environments.',
+        'Learn to program microcontrollers using Embedded C.',
+        'Understand the architecture of popular microcontrollers (e.g., ARM, AVR).',
+        'Interface sensors, displays, and motors with microcontrollers.',
+        'Use real-time clocks and ADCs (Analog to Digital Converters).',
+        'Implement communication protocols such as UART, SPI, and I2C.',
       ],
       icon: <RocketLaunchIcon className="h-6 w-6 text-pink-500" />,
     },
     {
-      title: 'Full-Stack Integration',
+      title: 'Embedded Systems Integration',
       steps: [
-        'Connect React front-end to Java back-end using RESTful APIs.',
-        'Understand data flow and state management.',
-        'Handle asynchronous operations.',
-        'Build complete full stack web applications.',
+        'Integrate sensors, actuators, and microcontrollers into a system.',
+        'Understand system-level design and integration of embedded hardware and software.',
+        'Develop communication between microcontrollers using serial protocols.',
+        'Debug embedded systems and optimize system performance.',
       ],
       icon: <RocketLaunchIcon className="h-6 w-6 text-pink-500" />,
     },
     {
-      title: 'Version Control & DevOps Basics',
+      title: 'Version Control & Embedded Systems Debugging',
       steps: [
-        'Master version control with Git.',
-        'Learn Git workflows, branching, and merging.',
-        'Understand DevOps practices.',
-        'Automate build, test, and deployment with Jenkins and Docker.',
-        'Prepare for professional development environments.',
+        'Master version control using Git for embedded systems projects.',
+        'Learn debugging techniques specific to embedded systems.',
+        'Understand hardware debugging using JTAG and logic analyzers.',
+        'Use debugging tools to troubleshoot embedded applications.',
+        'Explore best practices for embedded software testing and debugging.',
       ],
       icon: <RocketLaunchIcon className="h-6 w-6 text-gray-500" />,
     },
     {
       title: 'Final Capstone Project & Deployment',
       steps: [
-        'Plan and design a real-world capstone project.',
-        'Develop a complete web application.',
-        'Apply best practices for production-ready applications.',
-        'Deploy the application to cloud platforms like AWS or Heroku.',
-        'Showcase your full stack capabilities.',
+        'Plan and design a real-world embedded systems project.',
+        'Develop a complete embedded solution integrating hardware and software.',
+        'Test your embedded system for real-world performance.',
+        'Deploy your embedded system on actual hardware.',
+        'Showcase your embedded systems development skills.',
       ],
       icon: <CloudIcon className="h-6 w-6 text-teal-500" />,
     },
   ];
+  
 
   return (
     <div className="container-fluid mx-auto my-10">
-       <div className={`grid grid-cols-1 md:grid-cols-2 gap-4  p-10 rounded-md `}>
+       <div className={`grid grid-cols-1 md:grid-cols-0 gap-4  p-10 rounded-md `}>
          <div className='bg-white rounded-md '>
                 <AccordionList items={accordionItems} />
          </div>
-         <div className=' bg-inherit   flex items-center justify-center'>
+         {/* <div className=' bg-inherit   flex items-center justify-center'>
              <img src={img1} alt="" className='w-96 h-96' />
-         </div>
+         </div> */}
      
        </div>
     </div>

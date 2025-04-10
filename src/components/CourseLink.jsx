@@ -7,17 +7,17 @@ function CourseLink() {
       <div className="flex items-center justify-center px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12">
         <ul className="flex space-x-4 sm:space-x-6 md:space-x-8 text-sm sm:text-base font-semibold text-[#0057D3] cursor-pointer">
           <li data-aos="fade-right"
-    data-aos-easing="linear"
-    data-aos-duration="500" className="text-center hover:text-black">All Courses</li>
+            data-aos-easing="linear"
+            data-aos-duration="500" className="text-center hover:text-black">All Courses</li>
           <li data-aos="fade-right"
-    data-aos-easing="linear"
-    data-aos-duration="800" className="text-center hover:text-black">Design</li>
+            data-aos-easing="linear"
+            data-aos-duration="800" className="text-center hover:text-black">Design</li>
           <li data-aos="fade-right"
-    data-aos-easing="linear"
-    data-aos-duration="1100" className="text-center hover:text-black">Business</li>
+            data-aos-easing="linear"
+            data-aos-duration="1100" className="text-center hover:text-black">Business</li>
           <li data-aos="fade-right"
-    data-aos-easing="linear"
-    data-aos-duration="1400" className="text-center hover:text-black">Development</li>
+            data-aos-easing="linear"
+            data-aos-duration="1400" className="text-center hover:text-black">Development</li>
         </ul>
       </div>
 

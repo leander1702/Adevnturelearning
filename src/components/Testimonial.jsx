@@ -10,7 +10,7 @@ function Testimonial() {
                     </h3>
                 </div>
                 <div data-aos="fade-down" className="items-cente ">
-                    <h1 className="pt-4 font-semibold lg:text-3xl  text-center text-black">
+                    <h1 className="pt-4 font-semibold text-2xl lg:text-3xl  text-center text-[#0057D3]">
                       What Our Students Says About Us
                     </h1>
                 </div>

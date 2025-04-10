@@ -11,15 +11,16 @@ import {
 
 const Trainer = ({ trainer }) => {
   const iconMap = {
-    'Over 8 years of experience in MERN stack development.': BriefcaseIcon,
-    'Expertise in creating scalable RESTful APIs using Node.js and Express.': CodeBracketIcon,
-    'Proficient in building dynamic front-end applications with React.': PresentationChartLineIcon,
-    'Strong understanding of MongoDB schema design and database management.':AcademicCapIcon,
-    'Passionate about teaching best practices in full stack development.': LightBulbIcon,
-    'Focus on hands-on learning with real-world MERN stack projects.': AcademicCapIcon,
-    'Provides career guidance and interview preparation for aspiring MERN developers.': UserCircleIcon,
-    'Keeps up-to-date with the latest MERN stack trends and technologies.': UserCircleIcon,
+    'Over 8 years of experience in Data Science development.': BriefcaseIcon,
+    'Expertise in machine learning, data analysis, and statistical modeling.': CodeBracketIcon,
+    'Proficient in programming languages like Python and R.': PresentationChartLineIcon,
+    'Strong understanding of data visualization and data preprocessing.': AcademicCapIcon,
+    'Passionate about teaching best practices in data science.': LightBulbIcon,
+    'Focus on hands-on learning with real-world data science projects.': AcademicCapIcon,
+    'Provides career guidance and interview preparation for aspiring data scientists.': UserCircleIcon,
+    'Keeps up-to-date with the latest data science trends and technologies.': UserCircleIcon,
   };
+  
 
   return (
     <div className="bg-white rounded-lg shadow-md p-6">
@@ -50,15 +51,16 @@ const TrainerProfile = () => {
   const trainerData = {
     name: 'Alex Johnson',
     highlights: [
-      'Over 8 years of experience in MERN stack development.',
-      'Expertise in creating scalable RESTful APIs using Node.js and Express.',
-      'Proficient in building dynamic front-end applications with React.',
-      'Strong understanding of MongoDB schema design and database management.',
-      'Passionate about teaching best practices in full stack development.',
-      'Focus on hands-on learning with real-world MERN stack projects.',
-      'Provides career guidance and interview preparation for aspiring MERN developers.',
-      'Keeps up-to-date with the latest MERN stack trends and technologies.',
+      'Over 8 years of experience in Embedded Systems development.',
+      'Expertise in designing and programming microcontrollers (e.g., Arduino, Raspberry Pi).',
+      'Proficient in low-level programming languages like C and Assembly.',
+      'Strong understanding of hardware interfacing and peripheral management.',
+      'Passionate about teaching best practices in embedded systems design.',
+      'Focus on hands-on learning with real-world embedded projects.',
+      'Provides career guidance and interview preparation for aspiring embedded systems engineers.',
+      'Keeps up-to-date with the latest embedded systems trends and technologies.',
     ],
+    
   };
 
   return (

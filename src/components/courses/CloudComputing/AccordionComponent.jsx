@@ -42,103 +42,105 @@ const AccordionList = ({ items }) => {
 const AccordionComponent = () => {
   const accordionItems = [
     {
-      title: 'Introduction to Full Stack Development',
+      title: 'Introduction to Cloud Computing',
       steps: [
-        'Understand the role of a Full Stack Developer.',
-        'Learn about the layers of a web application: Front-end, Back-end, Database.',
-        'Overview of technologies used in the course.',
-        'Set up your development environment.',
-        'Learn best practices for clean and maintainable code.',
+        'Understand the role of cloud computing and its benefits.',
+        'Learn about the different types of cloud models: Public, Private, and Hybrid.',
+        'Overview of cloud service providers (AWS, Azure, Google Cloud).',
+        'Set up your cloud development environment.',
+        'Learn best practices for cloud infrastructure management.',
       ],
       icon: <GlobeAltIcon className="h-6 w-6 text-blue-500" />,
     },
     {
-      title: 'Core Java Fundamentals',
+      title: 'Core Cloud Concepts',
       steps: [
-        'Learn data types, variables, and operators.',
-        'Understand control flow statements.',
-        'Explore Object-Oriented Programming (OOP) concepts.',
-        'Learn about classes, objects, inheritance, and polymorphism.',
-        'Handle exceptions in Java.',
+        'Learn about cloud storage, virtual machines, and networking.',
+        'Understand cloud service models: IaaS, PaaS, SaaS.',
+        'Explore cloud security basics: encryption, firewalls, and identity management.',
+        'Learn about scalability, availability, and fault tolerance.',
+        'Introduction to cloud computing monitoring and management.',
       ],
       icon: <CpuChipIcon className="h-6 w-6 text-green-500" />,
     },
     {
-      title: 'Advanced Java Concepts',
+      title: 'Advanced Cloud Computing Concepts',
       steps: [
-        'Explore multithreading and concurrency.',
-        'Learn about the Collections Framework.',
-        'Understand I/O operations.',
-        'Learn network programming in Java.',
-        'Explore design patterns and best practices.',
+        'Explore cloud automation and orchestration tools (e.g., Terraform, Ansible).',
+        'Learn about containerization and Docker.',
+        'Understand microservices and serverless architecture.',
+        'Explore the use of Kubernetes for container orchestration.',
+        'Learn cloud security best practices and compliance.',
       ],
       icon: <CodeBracketIcon className="h-6 w-6 text-purple-500" />,
     },
     {
-      title: 'Front-End Development',
+      title: 'Cloud Storage & Databases',
       steps: [
-        'Learn HTML for structuring web content.',
-        'Style web pages with CSS.',
-        'Add interactivity with JavaScript.',
-        'Learn responsive web design.',
-        'Explore modern JavaScript frameworks like React.',
+        'Learn about cloud storage options (e.g., AWS S3, Azure Blob Storage).',
+        'Understand cloud databases (SQL and NoSQL options).',
+        'Explore data backup, replication, and disaster recovery strategies.',
+        'Learn to configure and scale cloud databases.',
+        'Implement data encryption and security for cloud storage.',
       ],
       icon: <GlobeAltIcon className="h-6 w-6 text-yellow-500" />,
     },
     {
-      title: 'Back-End Development with Java',
+      title: 'Cloud Networking & Security',
       steps: [
-        'Build back-end applications using Java and Spring Boot.',
-        'Create RESTful APIs.',
-        'Handle database interactions.',
-        'Implement authentication and authorization.',
-        'Deploy applications to production environments.',
+        'Understand cloud networking fundamentals (VPCs, Subnets, Routing).',
+        'Learn to set up load balancing and auto-scaling.',
+        'Explore cloud security groups and access control lists (ACLs).',
+        'Implement secure API gateway and access management.',
+        'Learn cloud monitoring tools for performance and security.',
       ],
       icon: <RocketLaunchIcon className="h-6 w-6 text-pink-500" />,
     },
     {
-      title: 'Full-Stack Integration',
+      title: 'Cloud Infrastructure as Code (IaC)',
       steps: [
-        'Connect React front-end to Java back-end using RESTful APIs.',
-        'Understand data flow and state management.',
-        'Handle asynchronous operations.',
-        'Build complete full stack web applications.',
+        'Learn to automate cloud infrastructure using Infrastructure as Code (IaC).',
+        'Explore tools like Terraform, AWS CloudFormation, and Azure Resource Manager.',
+        'Understand how to manage cloud resources programmatically.',
+        'Learn to deploy and manage scalable cloud infrastructure.',
+        'Integrate IaC with CI/CD pipelines for continuous delivery.',
       ],
       icon: <RocketLaunchIcon className="h-6 w-6 text-pink-500" />,
     },
     {
-      title: 'Version Control & DevOps Basics',
+      title: 'Version Control & Cloud DevOps Practices',
       steps: [
-        'Master version control with Git.',
-        'Learn Git workflows, branching, and merging.',
-        'Understand DevOps practices.',
-        'Automate build, test, and deployment with Jenkins and Docker.',
-        'Prepare for professional development environments.',
+        'Master version control with Git and GitHub for cloud projects.',
+        'Learn Git workflows, branching, and merging for cloud-based development.',
+        'Understand DevOps principles and their application in cloud environments.',
+        'Automate cloud infrastructure management with CI/CD pipelines.',
+        'Integrate cloud deployment with Jenkins, Docker, and Kubernetes.',
       ],
       icon: <RocketLaunchIcon className="h-6 w-6 text-gray-500" />,
     },
     {
-      title: 'Final Capstone Project & Deployment',
+      title: 'Final Capstone Project & Cloud Deployment',
       steps: [
-        'Plan and design a real-world capstone project.',
-        'Develop a complete web application.',
-        'Apply best practices for production-ready applications.',
-        'Deploy the application to cloud platforms like AWS or Heroku.',
-        'Showcase your full stack capabilities.',
+        'Design and implement a real-world cloud-based application.',
+        'Deploy cloud infrastructure using automation tools.',
+        'Implement cloud security and monitoring for production environments.',
+        'Scale and optimize cloud applications for performance and cost.',
+        'Showcase your cloud computing capabilities with a final project deployment.',
       ],
       icon: <CloudIcon className="h-6 w-6 text-teal-500" />,
     },
   ];
+  
 
   return (
     <div className="container-fluid mx-auto my-10">
-       <div className={`grid grid-cols-1 md:grid-cols-2 gap-4  p-10 rounded-md `}>
+       <div className={`grid grid-cols-1 md:grid-cols-0 gap-4  p-10 rounded-md `}>
          <div className='bg-white rounded-md '>
                 <AccordionList items={accordionItems} />
          </div>
-         <div className=' bg-inherit   flex items-center justify-center'>
+         {/* <div className=' bg-inherit   flex items-center justify-center'>
              <img src={img1} alt="" className='w-96 h-96' />
-         </div>
+         </div> */}
      
        </div>
     </div>

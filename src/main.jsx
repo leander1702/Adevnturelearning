@@ -9,7 +9,7 @@ import ErrorBoundary from './components/ErrorBoundary/ErrorBoundary.jsx'
 
 // Initialize AOS when the app starts
 AOS.init({
-  duration: 2000, // Animation duration in ms
+  duration: 1000, // Animation duration in ms
   once: true, // Animate only once
 });
 

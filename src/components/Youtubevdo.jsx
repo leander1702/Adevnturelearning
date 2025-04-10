@@ -1,17 +1,6 @@
-// import React from "react";
-import { FaCalendarAlt, FaUser } from "react-icons/fa";
-// import youtube1 from "../assets/youtube1.png";
-// import youtube2 from "../assets/youtube1.png";
-// import youtube3 from "../assets/youtube1.png";
-// import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from "react-icons/bs"; // Import the icons
-
 import React, { useState } from 'react';
 import frame1 from '../assets/frame1.svg';
 import frame2 from '../assets/frame2.svg';
-// import course3 from '../assets/course3.png';
-// import course4 from '../assets/course4.png';
-// import course5 from '../assets/course5.png';
-// import course6 from '../assets/course6.png';
 import { BsArrowLeft, BsArrowRight  } from 'react-icons/bs'; // Import arrow icons
 
 function Youtubevdo() {
@@ -25,35 +14,34 @@ function Youtubevdo() {
 
     ];
     const [currentIndex, setCurrentIndex] = useState(0);
-    const cardsPerView = 4;
+    const cardsPerView = window.innerWidth < 640 ? 1 : 4; // Adjust based on screen size
 
     const handleNext = () => {
-        if (currentIndex + cardsPerView < cards.length) {
-            setCurrentIndex(currentIndex + 1);
-        }
+      if (currentIndex + cardsPerView < cards.length) {
+        setCurrentIndex(currentIndex + 1);
+      }
     };
-
+  
     const handlePrev = () => {
-        if (currentIndex > 0) {
-            setCurrentIndex(currentIndex - 1);
-        }
+      if (currentIndex > 0) {
+        setCurrentIndex(currentIndex - 1);
+      }
     };
 
     return (
         <>
-            <div className="relative flex  overflow-hidden bg-white px-5 ">
-                <div
-                    className="flex  transition-transform duration-500 ease-in-out"
-                    style={{
-                        transform: `translateX(-${(currentIndex / cardsPerView) * 100}%)`,
-                        // Set total width
-                    }}
-                >
-                    {cards.map((card, index) => (
-                        <div
-                            key={index}
-                            className="w-1/4 flex-shrink-0 p-4 " // Each card is 1/4th width
-                        >
+    <div   className="relative overflow-hidden px-5">
+      <div
+        className="flex transition-transform duration-500 ease-in-out"
+        style={{
+          transform: `translateX(-${(currentIndex / cardsPerView) * 100}%)`,
+        }}
+      >
+        {cards.map((card, index) => (
+          <div
+            key={index}
+            className={`w-full lg:w-1/4 flex-shrink-0 p-2 sm:p-4`} // Adjust width for mobile
+          >
                             <div className="bg-white border  border-1  border-gray-300 rounded-lg items-center overflow-hidden text-left shadow-md p-2   ">
                                 <div className='flex pb-3  justify-around'>
                                     <p className='text-white  justify-center items-center text-base flex rounded-full bg-blue-500 w-12 h-12'>AL</p>
@@ -63,10 +51,6 @@ function Youtubevdo() {
                                 <img src={card.image} alt={card.title} className="w-full  object-cover  " />
                                 <div className="p-4">
                                     <p className='font-medium text-base text-gray-500'>How to become ridiculously self-aware in 20 minutes</p>
-
-                                    {/* <button className="bg-[#0057D3] border border-white text-white px-5 py-2 rounded-md font-semibold hover:border-[#0057D3] hover:bg-white hover:text-blue-600 transition duration-300">
-                          Know More
-                        </button> */}
                                     <div className="flex  items-center text-center pt-5 ">
                                         <i class="bi bi-heart-fill text-gray-500 hover:text-gray-500 text-[22px] cursor-pointer"></i>
                                         <i class="bi bi-share-fill text-gray-500 hover:text-gray-500 text-[22px] pl-5 cursor-pointer"></i>
@@ -74,74 +58,40 @@ function Youtubevdo() {
                                 </div>
                             </div>
                         </div>
-                    ))}
-                </div>
-
-                {/* Navigation Arrows */}
-                <div className="absolute top-1/2 left-0 right-0 transform -translate-y-1/2 flex justify-between px-4">
-                    <button
-                        onClick={handlePrev}
-                        className={`text-white bg-blue-500 hover:bg-blue-600 p-2 rounded-full shadow-md transition-colors duration-300 ${currentIndex === 0 ? 'opacity-50 cursor-not-allowed' : ''}`}
-                        disabled={currentIndex === 0}
-                    >
-                        <BsArrowLeft size={24} />
-                    </button>
-                    <button
-                        onClick={handleNext}
-                        className={`text-white bg-blue-500 hover:bg-blue-600 p-2 rounded-full shadow-md transition-colors duration-300 ${currentIndex + cardsPerView >= cards.length ? 'opacity-50 cursor-not-allowed' : ''}`}
-                        disabled={currentIndex + cardsPerView >= cards.length}
-                    >
-                        <BsArrowRight size={24} />
-                    </button>
-
-                </div>
-            </div>
-            {/* <div className="text-center  bg-gray-100  pb-5">
-                <div className="flex justify-center gap-20  flex-wrap">
-                    {newsData.map((item) => (
-                        <div
-                            className="bg-white rounded-lg shadow-lg overflow-hidden w-72 relative group"
-                            key={item.id}
-                        >
-                            <img
-                                src={item.image}
-                                alt={item.title}
-                                className="w-full h-30 object-cover"
-                            />
-
-                            <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                            <i className="bi bi-youtube text-white group-hover:text-red-500 transition-colors duration-300 text-5xl"></i>
-
-                            <div className="p-2 ">
-                                <p className="text-gray-500 text-sm font-bold flex justify-center gap-2 ">
-                                    <FaCalendarAlt className="text-blue-500 text-1xl" /> {item.date} <FaUser className="text-blue-500 text-1xl" /> {item.author}
-                                </p>
-                                <h3 className="text-lg font-bold text-gray-800 mt-2">
-                                    {item.title}
-                                </h3>
+                                ))}
+                              </div>
+                        
+                              <div className="absolute top-1/2 left-0 right-0 transform -translate-y-1/2 flex justify-between px-4">
+                                <button
+                                  onClick={handlePrev}
+                                  className={`text-white bg-blue-500 hover:bg-blue-600 p-2 rounded-full shadow-md transition-colors duration-300 ${currentIndex === 0 ? 'opacity-50 cursor-not-allowed' : ''}`}
+                                  disabled={currentIndex === 0}
+                                >
+                                  <BsArrowLeft size={24} />
+                                </button>
+                                <button
+                                  onClick={handleNext}
+                                  className={`text-white bg-blue-500 hover:bg-blue-600 p-2 rounded-full shadow-md transition-colors duration-300 ${currentIndex + cardsPerView >= cards.length ? 'opacity-50 cursor-not-allowed' : ''}`}
+                                  disabled={currentIndex + cardsPerView >= cards.length}
+                                >
+                                  <BsArrowRight size={24} />
+                                </button>
+                              </div>
                             </div>
-                        </div>
-                    ))}
-                </div>
-              
-                <div className="flex justify-center space-x-4 mt-4 mb-5">
-                    <button
-                        onClick={goToPrev}
-                        className="swiper-prev text-gray-400 hover:text-blue-400 transition duration-300"
-                    >
-                        <BsArrowLeftCircleFill size={30} />
-                    </button>
-                    <button
-                        onClick={goToNext}
-                        className="swiper-next text-gray-400 hover:text-blue-400 transition duration-300"
-                    >
-                        <BsArrowRightCircleFill size={30} />
-                    </button>
-                </div>
-
-            </div> */}
-        </>
-    );
-}
+                            </>)}
 
 export default Youtubevdo;
+
+
+
+
+
+
+
+
+
+
+
+
+
+

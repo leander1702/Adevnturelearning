@@ -10,9 +10,7 @@ const CourseOverview = () => {
           COURSE DESCRIPTION
         </h2>
         <p className="text-md text-gray-700 leading-relaxed">
-          This course covers the essentials of Full-Stack Development, equipping you with the skills to build dynamic,
-          responsive web applications from start to finish. You'll learn both frontend and backend technologies, including
-          databases, APIs, and deployment strategies.
+       Aspiring cloud engineers, IT professionals, or anyone interested in mastering cloud infrastructure, deployment, and management of scalable systems.
         </p>
       </div>
 
@@ -24,31 +22,31 @@ const CourseOverview = () => {
         <ul className="space-y-4 list-inside text-gray-700 text-md">
           <li className="flex items-start">
             <CheckCircleIcon className="h-6 w-6 text-[#0057D3] mr-3 flex-shrink-0" />
-            Frontend Development: HTML, CSS, JavaScript, and frameworks like React or Angular.
+            Cloud Platforms: AWS, Azure, Google Cloud
           </li>
           <li className="flex items-start">
             <CheckCircleIcon className="h-6 w-6 text-blue-600 mr-3 flex-shrink-0" />
-            Backend Development: Node.js, Express, Python (Django/Flask), or Java (Spring Boot).
+            Cloud Architecture: Designing scalable, reliable systems
           </li>
           <li className="flex items-start">
             <CheckCircleIcon className="h-6 w-6 text-blue-600 mr-3 flex-shrink-0" />
-            Databases: SQL (MySQL, PostgreSQL) and NoSQL (MongoDB).
+            Infrastructure Management: Virtual machines, containers, Kubernetes
           </li>
           <li className="flex items-start">
             <CheckCircleIcon className="h-6 w-6 text-blue-600 mr-3 flex-shrink-0" />
-            APIs: Building and consuming RESTful APIs and GraphQL.
+            Storage Solutions: Cloud storage, databases (SQL/NoSQL)
           </li>
           <li className="flex items-start">
             <CheckCircleIcon className="h-6 w-6 text-blue-600 mr-3 flex-shrink-0" />
-            Version Control: Git and GitHub for code management.
+            Networking: VPCs, load balancing, security groups
           </li>
           <li className="flex items-start">
             <CheckCircleIcon className="h-6 w-6 text-blue-600 mr-3 flex-shrink-0" />
-            Deployment: Hosting applications on cloud platforms (AWS, Heroku) and using Docker.
+            DSecurity: Encryption, identity management, firewalls
           </li>
           <li className="flex items-start">
             <CheckCircleIcon className="h-6 w-6 text-blue-600 mr-3 flex-shrink-0" />
-            Best Practices: Authentication, security, debugging, and testing.
+            Monitoring & Scaling: Auto-scaling, logging, performance monitoring
           </li>
         </ul>
       </div>
@@ -61,8 +59,7 @@ const CourseOverview = () => {
         <div className="flex items-start mb-4">
           <CheckCircleIcon className="h-6 w-6 text-blue-600 mr-3 flex-shrink-0" />
           <p className="text-mg text-gray-700">
-            Aspiring web developers, software engineers, or anyone interested in mastering both the client and server sides of web
-            development.
+          Aspiring cloud engineers, IT professionals, or anyone interested in mastering cloud infrastructure, deployment, and management of scalable systems.
           </p>
         </div>
       </div>
@@ -75,7 +72,7 @@ const CourseOverview = () => {
         <div className="flex items-start mb-4">
           <CheckCircleIcon className="h-6 w-6 text-blue-600 mr-3 flex-shrink-0" />
           <p className="text-md text-gray-700">
-            By the end of the course, you'll be able to design, develop, and deploy full-stack web applications independently.
+          By the end of the course, you'll be able to design, deploy, and manage applications on cloud platforms, ensuring scalability, reliability, and security while utilizing cloud services and resources efficiently.
           </p>
         </div>
       </div>

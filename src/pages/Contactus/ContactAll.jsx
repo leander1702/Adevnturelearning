@@ -6,7 +6,7 @@ import ContactForm from "../../components/ContactForm";
 function ContactAll(){
     return(
         <>
-        <Connect/>
+       <Connect/>
        <ContactForm/> 
        <Contact/>
       

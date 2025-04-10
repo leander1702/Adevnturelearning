@@ -10,9 +10,10 @@ const CourseOverview = () => {
           COURSE DESCRIPTION
         </h2>
         <p className="text-md text-gray-700 leading-relaxed">
-          This course covers the essentials of Full-Stack Development, equipping you with the skills to build dynamic,
-          responsive web applications from start to finish. You'll learn both frontend and backend technologies, including
-          databases, APIs, and deployment strategies.
+        This course covers the essentials of Software Testing, equipping you with the skills to ensure the quality and 
+        reliability of software applications. You'll learn various testing techniques, including unit, integration, and
+         end-to-end testing, 
+        along with tools for automation, test-driven development (TDD), and continuous integration practices.
         </p>
       </div>
 
@@ -24,15 +25,15 @@ const CourseOverview = () => {
         <ul className="space-y-4 list-inside text-gray-700 text-md">
           <li className="flex items-start">
             <CheckCircleIcon className="h-6 w-6 text-[#0057D3] mr-3 flex-shrink-0" />
-            Frontend Development: HTML, CSS, JavaScript, and frameworks like React or Angular.
+            Software Testing Techniques: Unit Testing, Integration Testing, End-to-End Testing
           </li>
           <li className="flex items-start">
             <CheckCircleIcon className="h-6 w-6 text-blue-600 mr-3 flex-shrink-0" />
-            Backend Development: Node.js, Express, Python (Django/Flask), or Java (Spring Boot).
+            Testing Frameworks: JUnit, Selenium, Mocha, Jest
           </li>
           <li className="flex items-start">
             <CheckCircleIcon className="h-6 w-6 text-blue-600 mr-3 flex-shrink-0" />
-            Databases: SQL (MySQL, PostgreSQL) and NoSQL (MongoDB).
+            Test Automation: Automating test cases, CI/CD integration
           </li>
           <li className="flex items-start">
             <CheckCircleIcon className="h-6 w-6 text-blue-600 mr-3 flex-shrink-0" />
@@ -40,15 +41,15 @@ const CourseOverview = () => {
           </li>
           <li className="flex items-start">
             <CheckCircleIcon className="h-6 w-6 text-blue-600 mr-3 flex-shrink-0" />
-            Version Control: Git and GitHub for code management.
+            Bug Tracking: Identifying, reporting, and managing defects
           </li>
           <li className="flex items-start">
             <CheckCircleIcon className="h-6 w-6 text-blue-600 mr-3 flex-shrink-0" />
-            Deployment: Hosting applications on cloud platforms (AWS, Heroku) and using Docker.
+            Version Control: Using Git and GitHub for test code management
           </li>
           <li className="flex items-start">
             <CheckCircleIcon className="h-6 w-6 text-blue-600 mr-3 flex-shrink-0" />
-            Best Practices: Authentication, security, debugging, and testing.
+            Best Practices: Test-driven development (TDD), behavior-driven development (BDD), and continuous testing
           </li>
         </ul>
       </div>
@@ -61,8 +62,7 @@ const CourseOverview = () => {
         <div className="flex items-start mb-4">
           <CheckCircleIcon className="h-6 w-6 text-blue-600 mr-3 flex-shrink-0" />
           <p className="text-mg text-gray-700">
-            Aspiring web developers, software engineers, or anyone interested in mastering both the client and server sides of web
-            development.
+          Aspiring QA engineers, software developers, or anyone interested in mastering the art of ensuring software quality through testing methodologies.
           </p>
         </div>
       </div>
@@ -75,7 +75,7 @@ const CourseOverview = () => {
         <div className="flex items-start mb-4">
           <CheckCircleIcon className="h-6 w-6 text-blue-600 mr-3 flex-shrink-0" />
           <p className="text-md text-gray-700">
-            By the end of the course, you'll be able to design, develop, and deploy full-stack web applications independently.
+          By the end of the course, you'll be equipped with the skills to design, implement, and manage various software testing strategies, including manual and automated testing, ensuring the reliability and robustness of applications.
           </p>
         </div>
       </div>

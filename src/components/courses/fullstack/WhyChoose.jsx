@@ -12,7 +12,7 @@ const WhyChoose = () => {
   return (
     <div className="container-fluid mx-auto px-4 py-16 bg-gradient-to-br from-blue-50 to-blue-100">
       <div className="p-3 mx-auto">
-        <h1 className="text-3xl font-semibold text-[#0057D3] text-center mb-6 capitalize">
+        <h1 className="text-2xl lg:text-3xl  font-semibold text-[#0057D3] text-center mb-6 capitalize">
           Unlock Your Potential with Our Full Stack Course
         </h1>
         <p className="text-lg text-gray-700 text-center mb-12 max-w-3xl mx-auto">
@@ -22,7 +22,7 @@ const WhyChoose = () => {
         <hr className="border-t border-blue-300 w-3/5 mx-auto mb-12" />
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 ">
           <div className="lg:col-span-2">
-            <h2 className="text-3xl font-semibold text-[#0057D3] mb-6 text-center">
+            <h2 className="text-2xl lg:text-3xl font-semibold text-[#0057D3] mb-6 text-center">
               Why Choose Us?
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-3xl mx-auto mt-8">

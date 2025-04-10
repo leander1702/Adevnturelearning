@@ -1,87 +1,170 @@
-import React from 'react';
+import React, { useState } from 'react';
 import form2 from '../assets/form2.gif';
+import API from '../service/API';
 
 function UpskillForm() {
-  return (
-    <div className="bg-blue-50 py-12 min-h-screen flex items-center justify-center">
-      <div className="w-full  max-w-4xl px-4">
-        <div className="bg-white w-full lg:w-3/4 md:w-full rounded-lg shadow-md p-8 mx-auto">
-          <h1 className="sm:text-3xl font-semibold text-[#0057D3] mb-2 text-center">
-            Transform Your Workforce
-          </h1>
-          <p className="text-lg text-gray-700 mb-6 text-center">Write to us for your upskilling needs</p>
+  const [formData, setFormData] = useState({
+    name: '',
+    title: '',
+    email: '',
+    phone_number: '',
+    company_name: '',
+    message: ''
+  });
 
-          <form className="grid grid-cols-1 md:grid-cols-2 gap-6">
+  const [errors, setErrors] = useState({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitSuccess, setSubmitSuccess] = useState(false);
+
+  const handleChange = (e) => {
+    const { id, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [id]: value
+    }));
+    // Clear error when user types
+    if (errors[id]) {
+      setErrors(prev => ({
+        ...prev,
+        [id]: null
+      }));
+    }
+  };
+
+
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+
+    try {
+      const res = await API.post("corporate-training/", formData)
+      console.log(res)
+    } catch (error) {
+      console.log(error)
+    }
+
+
+
+  };
+
+  return (
+    <div className="bg-gradient-to-br from-blue-50 to-blue-100 py-12 min-h-screen flex items-center justify-center">
+      <div className="bg-white rounded-xl shadow-xl overflow-hidden md:flex">
+        <div className="hidden md:block md:w-1/3 bg-[#0057D3] p-8 flex items-center">
+          <div>
+            <h2 className="text-white text-2xl font-bold mb-4">Transform Your Workforce</h2>
+            <p className="text-blue-100 mb-6">Let us help you build the skills your team needs to succeed in today's competitive landscape.</p>
+            {/* <img 
+                  src={form2} 
+                  alt="Upskilling illustration" 
+                  className="w-full h-auto rounded-lg"
+                  loading="lazy"
+                /> */}
+          </div>
+        </div>
+
+        <div className="w-full md:w-2/3 p-8">
+          <div className="md:hidden mb-6 text-center">
+            <h1 className="text-2xl font-bold text-[#0057D3] mb-2">Transform Your Workforce</h1>
+            <p className="text-gray-600">Write to us for your upskilling needs</p>
+          </div>
+
+          <form className="space-y-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label htmlFor="fullName" className="block text-gray-700 text-sm font-medium mb-1">
+                  Full Name <span className="text-red-500">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition ${errors.fullName ? 'border-red-500' : 'border-gray-300'}`}
+                  placeholder="John Doe"
+                />
+                {errors.fullName && <p className="text-red-500 text-xs mt-1">{errors.fullName}</p>}
+              </div>
+              <div>
+                <label htmlFor="title" className="block text-gray-700 text-sm font-medium mb-1">
+                  Title
+                </label>
+                <input
+                  type="text"
+                  id="title"
+                  value={formData.title}
+                  onChange={handleChange}
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+                  placeholder="HR Manager"
+                />
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label htmlFor="email" className="block text-gray-700 text-sm font-medium mb-1">
+                  E-Mail <span className="text-red-500">*</span>
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition ${errors.email ? 'border-red-500' : 'border-gray-300'}`}
+                  placeholder="john@company.com"
+                />
+                {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
+              </div>
+              <div>
+                <label htmlFor="contactNumber" className="block text-gray-700 text-sm font-medium mb-1">
+                  Contact Number <span className="text-red-500">*</span>
+                </label>
+                <input
+                  type="tel"
+                  id="phone_number"
+                  value={formData.phone_number}
+                  onChange={handleChange}
+                  className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition ${errors.contactNumber ? 'border-red-500' : 'border-gray-300'}`}
+                  placeholder="+1 (555) 123-4567"
+                />
+                {errors.contactNumber && <p className="text-red-500 text-xs mt-1">{errors.contactNumber}</p>}
+              </div>
+            </div>
+
             <div>
-              <label htmlFor="fullName" className="block text-gray-700 text-sm font-bold mb-2">
-                Full Name
+              <label htmlFor="companyName" className="block text-gray-700 text-sm font-medium mb-1">
+                Company Name <span className="text-red-500">*</span>
               </label>
               <input
                 type="text"
-                id="fullName"
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                placeholder="Your Full Name"
+                id="company_name"
+                value={formData.company_name}
+                onChange={handleChange}
+                className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition ${errors.companyName ? 'border-red-500' : 'border-gray-300'}`}
+                placeholder="Acme Inc."
               />
+              {errors.companyName && <p className="text-red-500 text-xs mt-1">{errors.companyName}</p>}
             </div>
+
             <div>
-              <label htmlFor="title" className="block text-gray-700 text-sm font-bold mb-2">
-                Title
-              </label>
-              <input
-                type="text"
-                id="title"
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                placeholder="Your Title"
-              />
-            </div>
-            <div>
-              <label htmlFor="email" className="block text-gray-700 text-sm font-bold mb-2">
-                E-Mail
-              </label>
-              <input
-                type="email"
-                id="email"
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                placeholder="Your Email"
-              />
-            </div>
-            <div>
-              <label htmlFor="contactNumber" className="block text-gray-700 text-sm font-bold mb-2">
-                Contact Number
-              </label>
-              <input
-                type="tel"
-                id="contactNumber"
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                placeholder="Your Contact Number"
-              />
-            </div>
-            <div className="col-span-full">
-              <label htmlFor="companyName" className="block text-gray-700 text-sm font-bold mb-2">
-                Company Name
-              </label>
-              <input
-                type="text"
-                id="companyName"
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                placeholder="Your Company Name"
-              />
-            </div>
-            <div className="col-span-full">
-              <label htmlFor="requestMessage" className="block text-gray-700 text-sm font-bold mb-2">
-                Request Message
+              <label htmlFor="requestMessage" className="block text-gray-700 text-sm font-medium mb-1">
+                Request Message <span className="text-red-500">*</span>
               </label>
               <textarea
-                id="requestMessage"
+                id="message"
                 rows="4"
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                placeholder="Write your upskilling needs here..."
+                value={formData.message}
+                onChange={handleChange}
+                className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition ${errors.requestMessage ? 'border-red-500' : 'border-gray-300'}`}
+                placeholder="Tell us about your upskilling needs..."
               ></textarea>
             </div>
-            <div className="col-span-full">
+
+            <div className="pt-2">
               <button
                 type="submit"
-                className="bg-[#0057D3] border hover:border-[#0057D3] hover:bg-white hover:text-[#0057D3] text-white font-semibold py-3 px-6 rounded-md focus:outline-none focus:shadow-outline"
+                onClick={handleSubmit}
+                className={`w-full bg-[#0057D3] hover:bg-[#0044b3] text-white font-medium py-3 px-6 rounded-lg transition-colors duration-300 flex items-center justify-center ${isSubmitting ? 'opacity-75 cursor-not-allowed' : ''}`}
               >
                 Submit
               </button>
@@ -89,7 +172,9 @@ function UpskillForm() {
           </form>
         </div>
       </div>
+
     </div>
+
   );
 }
 

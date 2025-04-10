@@ -29,20 +29,20 @@ function Logos() {
   return (
     <div className="bg-blue-30">
       <div className="justify-center text-center items-center">
-        <h1 data-aos="fade-down"  className="font-semibold lg:text-3xl   mt-5 text-black">
+        <h1 data-aos="fade-down"  className="font-semibold text-2xl lg:text-3xl   mt-5 text-[#0057D3]">
           Our Technologies
         </h1>
-        <div className="p-4">
-          <h4 className="font-normal lg:text-lg text-gray-600 text-center">
+        {/* <div className="p-4">
+          <h4 className="font-normal text-base text-gray-600 text-center">
             Mastering tech, Boosting careers, Adapting to digital change
           </h4>
-        </div>
+        </div> */}
       </div>
 
-      <div   className="w-full overflow-hidden pb-4 sm:py-5 sm:pb-5">
-        <div className="flex w-max animate-marquee space-x-6 sm:space-x-12 md:space-x-16 lg:space-x-20">
+      <div   className="w-full overflow-hidden py-5 pb-5">
+        <div className="flex w-max animate-marquee lg:space-x-20 space-x-12">
           {[...tools, ...tools].map((tool, index) => (
-            <div key={index} className="text-4xl pt-3 mb-5 sm:text-4xl md:text-5xl transition-transform hover:scale-110">
+            <div key={index} className="text-5xl pt-3 mb-5  transition-transform hover:scale-110">
               {tool.icon}
             </div>
           ))}

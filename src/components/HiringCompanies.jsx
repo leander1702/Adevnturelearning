@@ -36,33 +36,33 @@ const HiringCompanies = () => {
     ];
 
     return (
-        <div className="w-full text-center lg:py-8 bg-white ">
+        <div className="w-full text-center py-4 lg:py-8 bg-white ">
           <h3
-            className="font-bold inline-flex items-center justify-center rounded-[20px] text-center p-2 px-4 lg:text-base "
+            className="font-bold inline-flex items-center justify-center rounded-[20px] text-center p-2 px-4 text-sm lg:text-base "
             style={{ backgroundColor: '#CDD9FF', color: "#0057D3" }}
           >
             OUR HIRING COMPANIES  
           </h3>
-          <h1 data-aos="fade-down" className="font-semibold lg:text-3xl  mt-5 text-black">
+          <h1 data-aos="fade-down" className="font-semibold text-2xl lg:text-3xl   mt-5 text-[#0057D3]">
           Explore Top Opportunities
           </h1>
           
           <div className="w-full overflow-hidden  mt-4 sm:py-0 bg-[#F4F9FF]">
-            <div className="flex w-max animate-marquee space-x-6 sm:space-x-20 mb-4">
+            <div className="flex w-max animate-marquee space-x-3 sm:space-x-20 mb-4">
               {[...companies, ...companies].map((company, index) => (
                 <div key={index} className="transition-transform hover:scale-110">
                   <img
                     src={company.logo}
-                    className="lg:w-32  lg:pt-4"
+                    className="w-32 p-2 lg:w-44  lg:p-2"
                     alt={`${company.name} logo`}
                   />
                 </div>
               ))}
             </div>
-            <div className="flex w-max animate-marquee-reverse space-x-6 sm:space-x-20 ">
+            <div className="flex w-max animate-marquee-reverse space-x-3 sm:space-x-20 ">
               {[...companies, ...companies].map((company, index) => (
                 <div key={index} className="transition-transform hover:scale-110">
-                  <img src={company.logo} className="lg:w-32 lg:pb-4" alt={`${company.name} logo`} />
+                  <img src={company.logo} className="w-32 p-2 lg:w-44 lg:p-2" alt={`${company.name} logo`} />
                 </div>
               ))}
             </div>

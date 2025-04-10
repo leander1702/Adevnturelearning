@@ -17,7 +17,13 @@ import Embedded_system from "./components/Courses/EmbeddedSystem/Course";
 import Cloud_Computing from "./components/Courses/CloudComputing/Course";
 import Data_science from "./components/Courses/DataScience/Course";
 import Data_analytics from "./components/Courses/DataAnalytics/Course";
-import SoftwareTesting from "./components/courses/SoftwareTesting/Course";
+import SoftwareTesting from "./components/Courses/SoftwareTesting/Course";
+import ArticlePage1 from "./components/ArticlePage1";
+import ArticlePage2 from "./components/ArticlePage2";
+import ArticlePage3 from "./components/ArticlePage3";
+import Register from "./components/Register";
+
+
 
 
 
@@ -46,6 +52,10 @@ function App() {
           <Route path="/blogs" element={<AllBlogs/>}/>
           <Route path="/onlinetraining" element={<OnlineTrain/>}/>
           <Route path="/corporate" element={<Corporate/>}/>
+          <Route path="/article1" element={<ArticlePage1 />} />
+          <Route path="/Article2" element={<ArticlePage2/>}/>   
+          <Route path="/Article3" element={<ArticlePage3/>}/>
+          <Route path="/Register" element={<Register/>} />
         </Routes>
         <Footer />
     </>

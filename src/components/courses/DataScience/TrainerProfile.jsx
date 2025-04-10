@@ -50,15 +50,17 @@ const TrainerProfile = () => {
   const trainerData = {
     name: 'Alex Johnson',
     highlights: [
-      'Over 8 years of experience in MERN stack development.',
-      'Expertise in creating scalable RESTful APIs using Node.js and Express.',
-      'Proficient in building dynamic front-end applications with React.',
-      'Strong understanding of MongoDB schema design and database management.',
-      'Passionate about teaching best practices in full stack development.',
-      'Focus on hands-on learning with real-world MERN stack projects.',
-      'Provides career guidance and interview preparation for aspiring MERN developers.',
-      'Keeps up-to-date with the latest MERN stack trends and technologies.',
+      'Over 8 years of experience in Data Analytics development.',
+      'Expertise in data wrangling, statistical analysis, and business intelligence.',
+      'Proficient in programming languages like Python, SQL, and Excel.',
+      'Strong understanding of data visualization tools like Tableau and Power BI.',
+      'Passionate about teaching best practices in data analytics and data visualization.',
+      'Focus on hands-on learning with real-world data analytics projects.',
+      'Provides career guidance and interview preparation for aspiring data analysts.',
+      'Keeps up-to-date with the latest data analytics trends, tools, and technologies.',
     ],
+    
+    
   };
 
   return (

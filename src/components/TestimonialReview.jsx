@@ -35,7 +35,7 @@ function TestimonialReview() {
                     {[...reviews, ...reviews].map((review, index) => (
                         <div key={index} className="text-center w-60 p-3 bg-white shadow-2xl rounded-lg transition-transform transform hover:scale-105">
                            
-                                <i class="bi bi-person-circle lg:text-6xl text-[#0057D3] "></i>
+                                <i class="bi bi-person-circle text-6xl lg:text-6xl text-[#0057D3] "></i>
                                 
                        
                             <h3 className="text-lg font-semibold mt-3">{review.name}</h3>

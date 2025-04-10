@@ -10,9 +10,10 @@ const CourseOverview = () => {
           COURSE DESCRIPTION
         </h2>
         <p className="text-md text-gray-700 leading-relaxed">
-          This course covers the essentials of Full-Stack Development, equipping you with the skills to build dynamic,
-          responsive web applications from start to finish. You'll learn both frontend and backend technologies, including
-          databases, APIs, and deployment strategies.
+        This course covers the essentials of Embedded System Development, 
+        equipping you with the skills to design and build efficient, 
+        real-time embedded systems from start to finish. You'll learn both hardware and software components, 
+        including microcontrollers, sensors, communication protocols, and deployment strategies.
         </p>
       </div>
 
@@ -24,31 +25,31 @@ const CourseOverview = () => {
         <ul className="space-y-4 list-inside text-gray-700 text-md">
           <li className="flex items-start">
             <CheckCircleIcon className="h-6 w-6 text-[#0057D3] mr-3 flex-shrink-0" />
-            Frontend Development: HTML, CSS, JavaScript, and frameworks like React or Angular.
+            Embedded Systems: Working with microcontrollers (e.g., Arduino, Raspberry Pi) and real-time operating systems (RTOS).
           </li>
           <li className="flex items-start">
             <CheckCircleIcon className="h-6 w-6 text-blue-600 mr-3 flex-shrink-0" />
-            Backend Development: Node.js, Express, Python (Django/Flask), or Java (Spring Boot).
+            Hardware Integration: Using sensors, actuators, and communication protocols (I2C, SPI, UART).
           </li>
           <li className="flex items-start">
             <CheckCircleIcon className="h-6 w-6 text-blue-600 mr-3 flex-shrink-0" />
-            Databases: SQL (MySQL, PostgreSQL) and NoSQL (MongoDB).
+            Firmware Development: Writing C/C++ code for embedded applications.
           </li>
           <li className="flex items-start">
             <CheckCircleIcon className="h-6 w-6 text-blue-600 mr-3 flex-shrink-0" />
-            APIs: Building and consuming RESTful APIs and GraphQL.
+            Communication: Implementing wireless protocols like Bluetooth, Wi-Fi, and Zigbee.
           </li>
           <li className="flex items-start">
             <CheckCircleIcon className="h-6 w-6 text-blue-600 mr-3 flex-shrink-0" />
-            Version Control: Git and GitHub for code management.
+            Power Management: Optimizing energy use in embedded devices.
           </li>
           <li className="flex items-start">
             <CheckCircleIcon className="h-6 w-6 text-blue-600 mr-3 flex-shrink-0" />
-            Deployment: Hosting applications on cloud platforms (AWS, Heroku) and using Docker.
+            Debugging: Using tools like oscilloscopes and logic analyzers.
           </li>
           <li className="flex items-start">
             <CheckCircleIcon className="h-6 w-6 text-blue-600 mr-3 flex-shrink-0" />
-            Best Practices: Authentication, security, debugging, and testing.
+            Deployment: Flashing firmware and deploying embedded solutions.
           </li>
         </ul>
       </div>
@@ -61,8 +62,8 @@ const CourseOverview = () => {
         <div className="flex items-start mb-4">
           <CheckCircleIcon className="h-6 w-6 text-blue-600 mr-3 flex-shrink-0" />
           <p className="text-mg text-gray-700">
-            Aspiring web developers, software engineers, or anyone interested in mastering both the client and server sides of web
-            development.
+          Aspiring embedded systems engineers, hardware enthusiasts, or 
+          anyone interested in mastering both the hardware and software aspects of embedded systems.
           </p>
         </div>
       </div>
@@ -75,7 +76,8 @@ const CourseOverview = () => {
         <div className="flex items-start mb-4">
           <CheckCircleIcon className="h-6 w-6 text-blue-600 mr-3 flex-shrink-0" />
           <p className="text-md text-gray-700">
-            By the end of the course, you'll be able to design, develop, and deploy full-stack web applications independently.
+          By the end of the course, you'll be able to design, develop, and deploy embedded systems, integrating hardware components with software to create functional,
+           real-world applications.
           </p>
         </div>
       </div>

@@ -5,16 +5,30 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/autoplay"; // Import the autoplay module
 import { Pagination, Autoplay } from "swiper/modules"; // Import necessary modules
-import baner1 from '../assets/baner1.svg'
-import baner2 from '../assets/baner2.svg'
+
+import banner1 from '../assets/banner1.svg'
+import banner2 from '../assets/banner2.svg'
+import banner3 from '../assets/banner3.svg'
+import banner4 from '../assets/banner4.svg'
+import banner5 from '../assets/banner5.svg'
+
 
 const images = [
   {
-    image:baner1
+    image:banner1
   },
   {
-    image:baner2
-  }
+    image:banner2
+  },
+  {
+    image:banner3
+  },
+  {
+    image:banner4
+  },
+  {
+    image:banner5
+  },
 ];
 
 export default function CarouselPage() {
@@ -41,14 +55,15 @@ export default function CarouselPage() {
             delay: 3000, 
             disableOnInteraction: false, 
           }}
-          className="w-full h-60 sm:h-80 md:h-96 lg:h-120 border border-gray-300 shadow-2xl shadow-gray-100 rounded"
+          className="w-full "
         >
           {images.map((img, index) => (
             <SwiperSlide key={index}>
               <img
                 src={img.image}
                 alt={`Slide ${index + 1}`}
-                className="w-full h-full object-cover rounded"
+                className="w-full lg:w-full
+                 object-cover rounded"
               />
             </SwiperSlide>
             

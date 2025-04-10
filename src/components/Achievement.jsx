@@ -13,20 +13,20 @@ const Achievements = () => {
 
       <div  className="grid grid-cols-4 md:grid-cols-4 px-6 gap-4 mt-8 sm:mt-12">
         <div>
-          <p className="text-2xl sm:text-4xl font-bold text-[#0057D3]">20K+</p>
-          <p className="text-xs sm:text-lg font-semibold text-gray-500 mt-1 uppercase">Happy Clients</p>
+          <p className="text-lg lg:text-4xl font-bold text-[#0057D3]">20K+</p>
+          <p className="text-[12px] lg:text-lg font-semibold text-gray-500 mt-1 uppercase">Happy Clients</p>
         </div>
         <div>
-          <p className="text-2xl sm:text-4xl font-bold text-[#0057D3]">2500+</p>
-          <p className="text-xs sm:text-lg font-semibold text-gray-500 mt-1 uppercase">Students</p>
+          <p className="text-lg lg:text-4xl font-bold text-[#0057D3]">2500+</p>
+          <p className="text-[12px] lg:text-lg font-semibold text-gray-500 mt-1 uppercase">Our Students</p>
         </div>
         <div>
-          <p className="text-2xl sm:text-4xl font-bold text-[#0057D3]">7000+</p>
-          <p className="text-xs sm:text-lg font-semibold text-gray-500 mt-1 uppercase">Projects Done</p>
+          <p className="text-lg lg:text-4xl font-bold text-[#0057D3]">7000+</p>
+          <p className="text-[12px] lg:text-lg font-semibold text-gray-500 mt-1 uppercase">Projects Done</p>
         </div>
         <div>
-          <p className="text-2xl sm:text-4xl font-bold text-[#0057D3]">15+</p>
-          <p className="text-xs sm:text-lg font-semibold text-gray-500 mt-1 uppercase">Advance Courses</p>
+          <p className="text-lg lg:text-4xl font-bold text-[#0057D3]">15+</p>
+          <p className="text-[12px] lg:text-lg font-semibold text-gray-500 mt-1 uppercase">Advance Courses</p>
         </div>
       </div>
     </div>

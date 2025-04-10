@@ -19,7 +19,7 @@ const CourseOverview = () => {
       {/* What You'll Learn */}
       <div className="mb-8">
         <h2 className="text-xl font-semibold text-[#0057D3] mb-4">
-          WHAT YOU'LL LEARN:
+          WHAT YOU'LL LEARN
         </h2>
         <ul className="space-y-4 list-inside text-gray-700 text-md">
           <li className="flex items-start">
@@ -56,7 +56,7 @@ const CourseOverview = () => {
       {/* Who Should Enroll */}
       <div className="mb-8">
         <h2 className="text-xl font-semibold text-[#0057D3] mb-4">
-          WHO SHOULD ENROLL:
+          WHO SHOULD ENROLL
         </h2>
         <div className="flex items-start mb-4">
           <CheckCircleIcon className="h-6 w-6 text-blue-600 mr-3 flex-shrink-0" />
@@ -70,7 +70,7 @@ const CourseOverview = () => {
       {/* Outcome */}
       <div>
         <h2 className="text-xl font-semibold text-[#0057D3] mb-4">
-          OUTCOME:
+          OUTCOME
         </h2>
         <div className="flex items-start mb-4">
           <CheckCircleIcon className="h-6 w-6 text-blue-600 mr-3 flex-shrink-0" />

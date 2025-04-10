@@ -1,38 +1,45 @@
 import React, { useState } from 'react';
 import card1 from '../assets/card1.jpeg';
+import { useNavigate } from 'react-router-dom';
+
 
 const NewsandBlog = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const navigate= useNavigate()
+
+   const handleClick = (id) => {
+    navigate(id); // Navigate to the course page with the given ID
+  };
 
   // Sample blog data
   const blogs = [
     {
-      id: 1,
+      id:'/article1',
       category: "General",
       date: "03 Apr 2025",
       readTime: "33 min read",
-      title: "24 Trending Courses Online in 2025: Top Benefits and How To Pick One!",
-      excerpt: "Ever found yourself catching up on a mini-lesson while waiting for your food delivery or flipping through an online module after a late-night cricket match? Nowadays, a quick break in the day often turns into an opportunity to learn something new — no extra...",
+      title: "6 Trending Courses Online in 2025: Top Benefits and How To Pick One!",
+      excerpt: "offering a wide range of courses that cater to various interests and career goals. Whether you're looking to upskill, change careers, or explore a new field, the top trending courses provide valuable opportunities to expand your knowledge.",
       author: "Admin",
       image: card1
     },
     {
-      id: 2,
+      id:'/article2',
       category: "Technology",
       date: "02 Apr 2025",
       readTime: "25 min read",
-      title: "The Future of AI in Education",
-      excerpt: "Discover how artificial intelligence is transforming learning experiences and personalized education pathways.",
+      title: " A Growing Demand for Full-Stack Developers",
+      excerpt: "The future of education is evolving to equip students with essential skills for building dynamic web applications. Full-stack development will play a key role, fostering innovation and preparing students for high-demand tech careers across diverse industries globally.",
       author: "Admin",
       image: card1
     },
     {
-      id: 3,
+      id: '/article3',
       category: "Business",
       date: "01 Apr 2025",
       readTime: "18 min read",
-      title: "Remote Work Skills for 2025",
-      excerpt: "Essential skills you need to thrive in the evolving remote work landscape of the future.",
+      title: "Adaptability with Technology: A Key Skill for Remote Work in 2025",
+      excerpt: "As remote work becomes more widespread, the ability to adapt to new and evolving technologies is critical for success. In 2025, remote workers will need to stay ahead of the curve in terms of tech tools and platforms, as companies increasingly rely on digital solutions to maintain productivity and communication.",
       author: "Admin",
       image: card1
     }
@@ -47,7 +54,7 @@ const NewsandBlog = () => {
   };
 
   return (
-    <div className="max-w-6xl mx-auto relative mt-5 p-3 ">
+    <div className="lg:max-w-6xl mx-auto relative  p-5 ">
       {/* Single Card Container */}
       <div
         className="relative bg-white rounded-lg overflow-hidden flex flex-col md:flex-row transition-all duration-300"
@@ -97,7 +104,7 @@ const NewsandBlog = () => {
               </div>
               <span className="text-sm text-gray-800">{blogs[currentIndex].author}</span>
             </div>
-            <button className="text-blue-600 hover:text-blue-800 text-sm font-medium">
+            <button onClick={() => handleClick(blogs[currentIndex].id)}  className="text-blue-600 hover:text-blue-800 text-sm font-medium">
               Read More →
             </button>
           </div>
@@ -109,7 +116,7 @@ const NewsandBlog = () => {
         <>
           <button
             onClick={prevSlide}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-blue-500 rounded-full p-2 shadow-lg hover:bg-gray-400 transition-colors z-10"
+            className="absolute left-0 top-1/2 -translate-y-1/2   bg-blue-500 rounded-full p-2 shadow-lg hover:bg-gray-400 transition-colors "
           >
             <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -117,7 +124,7 @@ const NewsandBlog = () => {
           </button>
           <button
             onClick={nextSlide}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-blue-500 rounded-full p-2 shadow-lg hover:bg-gray-400 transition-colors z-10"
+            className="absolute right-0 top-1/2 -translate-y-1/2  bg-blue-500 rounded-full p-2 shadow-lg hover:bg-gray-400 transition-colors "
           >
             <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -127,7 +134,7 @@ const NewsandBlog = () => {
       )}
 
       {/* Dots Indicator */}
-      <div className="flex justify-center mt-6 space-x-2">
+      <div className="flex justify-center mt-4 space-x-2">
         {blogs.map((_, index) => (
           <button
             key={index}
@@ -137,9 +144,9 @@ const NewsandBlog = () => {
           />
         ))}
       </div>
-      <div className='flex items-center space-x-4'>
+      <div className='flex items-center space-x-4 mt-4 lg:mt-0'>
         <div>
-          <p className='text-black text-2xl font-semibold'>Explore Blog's</p>
+          <p className='text-black text-lg lg:text-2xl  font-semibold'>Explore Blog's</p>
         </div>
         <div>
           <button className="bg-white border border-[#0057D3] text-[#0057D3] px-5 py-2 rounded-md font-semibold hover:bg-[#0057D3] hover:text-white transition duration-300">

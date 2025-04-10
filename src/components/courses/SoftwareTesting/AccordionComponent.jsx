@@ -42,103 +42,105 @@ const AccordionList = ({ items }) => {
 const AccordionComponent = () => {
   const accordionItems = [
     {
-      title: 'Introduction to Full Stack Development',
+      title: 'Introduction to Software Testing',
       steps: [
-        'Understand the role of a Full Stack Developer.',
-        'Learn about the layers of a web application: Front-end, Back-end, Database.',
-        'Overview of technologies used in the course.',
-        'Set up your development environment.',
-        'Learn best practices for clean and maintainable code.',
+        'Understand the role of a software tester.',
+        'Learn about the different types of software testing: Manual and Automated.',
+        'Overview of the software development lifecycle (SDLC).',
+        'Set up your testing environment.',
+        'Learn best practices for writing effective test cases.',
       ],
       icon: <GlobeAltIcon className="h-6 w-6 text-blue-500" />,
     },
     {
-      title: 'Core Java Fundamentals',
+      title: 'Core Testing Concepts',
       steps: [
-        'Learn data types, variables, and operators.',
-        'Understand control flow statements.',
-        'Explore Object-Oriented Programming (OOP) concepts.',
-        'Learn about classes, objects, inheritance, and polymorphism.',
-        'Handle exceptions in Java.',
+        'Learn about different types of testing: Unit, Integration, System, and Acceptance.',
+        'Understand functional vs non-functional testing.',
+        'Explore test levels: Smoke, Sanity, Regression, and User Acceptance Testing (UAT).',
+        'Learn about test case design techniques.',
+        'Handle bug tracking and defect management.',
       ],
       icon: <CpuChipIcon className="h-6 w-6 text-green-500" />,
     },
     {
-      title: 'Advanced Java Concepts',
+      title: 'Advanced Testing Techniques',
       steps: [
-        'Explore multithreading and concurrency.',
-        'Learn about the Collections Framework.',
-        'Understand I/O operations.',
-        'Learn network programming in Java.',
-        'Explore design patterns and best practices.',
+        'Explore test automation tools (e.g., Selenium, Cypress).',
+        'Learn about Continuous Integration and Continuous Testing.',
+        'Understand performance testing, load testing, and stress testing.',
+        'Learn about security testing and penetration testing.',
+        'Explore API testing and mocking.',
       ],
       icon: <CodeBracketIcon className="h-6 w-6 text-purple-500" />,
     },
     {
-      title: 'Front-End Development',
+      title: 'Front-End Testing',
       steps: [
-        'Learn HTML for structuring web content.',
-        'Style web pages with CSS.',
-        'Add interactivity with JavaScript.',
-        'Learn responsive web design.',
-        'Explore modern JavaScript frameworks like React.',
+        'Learn about testing HTML, CSS, and JavaScript for web applications.',
+        'Understand cross-browser and cross-platform testing.',
+        'Use tools for UI testing like Selenium or Cypress.',
+        'Explore responsive design testing.',
+        'Learn about visual regression testing.',
       ],
       icon: <GlobeAltIcon className="h-6 w-6 text-yellow-500" />,
     },
     {
-      title: 'Back-End Development with Java',
+      title: 'Back-End Testing',
       steps: [
-        'Build back-end applications using Java and Spring Boot.',
-        'Create RESTful APIs.',
-        'Handle database interactions.',
-        'Implement authentication and authorization.',
-        'Deploy applications to production environments.',
+        'Test back-end APIs using tools like Postman or REST Assured.',
+        'Understand database testing and SQL queries.',
+        'Learn about testing services, microservices, and cloud applications.',
+        'Implement authentication and authorization tests.',
+        'Explore testing with Docker containers and virtual environments.',
       ],
       icon: <RocketLaunchIcon className="h-6 w-6 text-pink-500" />,
     },
     {
-      title: 'Full-Stack Integration',
+      title: 'Test Automation Frameworks',
       steps: [
-        'Connect React front-end to Java back-end using RESTful APIs.',
-        'Understand data flow and state management.',
-        'Handle asynchronous operations.',
-        'Build complete full stack web applications.',
+        'Understand the role of test automation frameworks.',
+        'Learn to build test automation frameworks from scratch.',
+        'Integrate automated tests with CI/CD pipelines.',
+        'Learn about test reporting and logging.',
+        'Explore popular frameworks like JUnit, TestNG, and Cucumber.',
       ],
       icon: <RocketLaunchIcon className="h-6 w-6 text-pink-500" />,
     },
     {
-      title: 'Version Control & DevOps Basics',
+      title: 'Version Control & Test Management',
       steps: [
-        'Master version control with Git.',
-        'Learn Git workflows, branching, and merging.',
-        'Understand DevOps practices.',
-        'Automate build, test, and deployment with Jenkins and Docker.',
-        'Prepare for professional development environments.',
+        'Master version control with Git for test scripts.',
+        'Learn Git workflows for managing test code.',
+        'Understand test management tools (e.g., TestRail, Jira).',
+        'Track test execution and manage test environments.',
+        'Learn about test coverage and metrics.',
       ],
       icon: <RocketLaunchIcon className="h-6 w-6 text-gray-500" />,
     },
     {
-      title: 'Final Capstone Project & Deployment',
+      title: 'Final Capstone Project & Test Reporting',
       steps: [
-        'Plan and design a real-world capstone project.',
-        'Develop a complete web application.',
-        'Apply best practices for production-ready applications.',
-        'Deploy the application to cloud platforms like AWS or Heroku.',
-        'Showcase your full stack capabilities.',
+        'Plan and design a real-world test project.',
+        'Automate test cases and integrate them into the CI/CD pipeline.',
+        'Write detailed test reports and bug documentation.',
+        'Test the application in various environments.',
+        'Showcase your software testing skills with a final project presentation.',
       ],
       icon: <CloudIcon className="h-6 w-6 text-teal-500" />,
     },
   ];
+  
 
   return (
     <div className="container-fluid mx-auto my-10">
-       <div className={`grid grid-cols-1 md:grid-cols-2 gap-4  p-10 rounded-md `}>
+       <div className={`grid grid-cols-1 md:grid-cols-0 gap-4  p-10 rounded-md `}>
          <div className='bg-white rounded-md '>
                 <AccordionList items={accordionItems} />
          </div>
-         <div className=' bg-inherit   flex items-center justify-center'>
+         {/* <div className=' bg-inherit   flex items-center justify-center'>
              <img src={img1} alt="" className='w-96 h-96' />
-         </div>
+         </div> */}
      
        </div>
     </div>

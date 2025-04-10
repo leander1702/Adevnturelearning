@@ -4,10 +4,10 @@ function LearnerToExpert() {
   return (
     <div className="bg-gray-50 py-16">
       <div className="container mx-auto px-4 text-center">
-        <h1 className="sm:text-3xl font-semibold text-[#0057D3] mb-4">
+        <h1 className="lg:text-3xl text-2xl font-semibold text-[#0057D3] mb-4">
           From Learner to Industry Expert
         </h1>
-        <p className="text-lg text-gray-700 mb-8">
+        <p className="text-lg font-normal text-gray-700 mb-8">
           At Adventure Learning, we mentor, train, and launch successful careers
         </p>
 

@@ -76,3 +76,6 @@
       background-size: cover;
       background-position: fixed;
     }
+  .stack{
+    z-index: 999;
+  }

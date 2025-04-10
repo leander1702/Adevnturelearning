@@ -10,10 +10,10 @@ function Bloghead() {
                 >
                     NEWS & BLOGS
                 </h3>
-                <h1 data-aos="fade-up" className="pt-4 px-3 font-semibold lg:text-3xl  text-center text-black">
+                <h1 data-aos="fade-up" className="pt-4 px-3 font-semibold text-2xl lg:text-3xl   text-center text-[#0057D3]">
                 Insightful Tips, Guides, and Articles
                 </h1>
-                <h4 className=" pt-4  px-10 font-normal lg:text-lg  text-gray-600 text-center">
+                <h4 className=" pt-4  px-10 font-normal text-lg  text-gray-600 text-center">
                 Explore expert content with valuable insights, advice, and in-depth guides.
                 </h4>
             </div>

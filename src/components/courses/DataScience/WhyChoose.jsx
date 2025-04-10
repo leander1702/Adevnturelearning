@@ -16,7 +16,7 @@ const WhyChoose = () => {
           Unlock Your Potential with Our Data Science Course
         </h1>
         <p className="text-lg text-gray-700 text-center mb-12 max-w-3xl mx-auto">
-          Join our industry-leading full stack development program and gain
+          Join our industry-leading Data Science program and gain
           hands-on experience with cutting-edge technologies.
         </p>
         <hr className="border-t border-blue-300 w-3/5 mx-auto mb-12" />
@@ -28,7 +28,7 @@ const WhyChoose = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-3xl mx-auto mt-8">
               {[
                 {
-                  text: "Master modern front-end and back-end technologies.",
+                  text: "Master data analysis, machine learning, and advanced statistical techniques.",
                   icon: (
                     <CodeBracketIcon className="h-12 w-12 text-blue-600 mb-4" />
                   ),
@@ -52,7 +52,7 @@ const WhyChoose = () => {
                   ),
                 },
                 {
-                  text: "Develop expertise in cloud deployment and API development.",
+                  text: "Develop expertise in cloud-based data storage, scalable analytics solutions, and deploying machine learning models.",
                   icon: <CloudIcon className="h-12 w-12 text-blue-600 mb-4" />,
                 },
                 {

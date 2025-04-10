@@ -11,16 +11,17 @@ import {
 
 const Trainer = ({ trainer }) => {
   const iconMap = {
-    'Over 8 years of experience in MERN stack development.': BriefcaseIcon,
-    'Expertise in creating scalable RESTful APIs using Node.js and Express.': CodeBracketIcon,
-    'Proficient in building dynamic front-end applications with React.': PresentationChartLineIcon,
-    'Strong understanding of MongoDB schema design and database management.':AcademicCapIcon,
-    'Passionate about teaching best practices in full stack development.': LightBulbIcon,
-    'Focus on hands-on learning with real-world MERN stack projects.': AcademicCapIcon,
-    'Provides career guidance and interview preparation for aspiring MERN developers.': UserCircleIcon,
-    'Keeps up-to-date with the latest MERN stack trends and technologies.': UserCircleIcon,
+    'Over 8 years of experience in Cloud Computing development.': BriefcaseIcon,
+    'Expertise in cloud platforms like AWS, Azure, and Google Cloud.': CodeBracketIcon,
+    'Proficient in cloud architecture, deployment, and infrastructure management.': PresentationChartLineIcon,
+    'Strong understanding of containerization tools like Docker and Kubernetes.': AcademicCapIcon,
+    'Passionate about teaching best practices in cloud computing and architecture.': LightBulbIcon,
+    'Focus on hands-on learning with real-world cloud computing projects.': AcademicCapIcon,
+    'Provides career guidance and interview preparation for aspiring cloud engineers.': UserCircleIcon,
+    'Keeps up-to-date with the latest cloud computing trends and technologies.': UserCircleIcon,
   };
-
+  
+  
   return (
     <div className="bg-white rounded-lg shadow-md p-6">
       <h2 className="text-2xl font-semibold text-[#0057D3] mb-4">

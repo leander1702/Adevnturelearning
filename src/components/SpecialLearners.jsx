@@ -10,66 +10,100 @@ function SpecialLearners() {
     {
       name: 'Embedded System',
       image: course2,
+      description: 'Experts in IoT, microcontrollers, and hardware-software integration'
     },
     {
       name: 'Full Stack',
       image: course4,
+      description: 'Proficient in both frontend and backend development technologies'
     },
     {
       name: 'Cloud Computing',
       image: course6,
+      description: 'Skilled in AWS, Azure, and GCP cloud infrastructure solutions'
     },
     {
       name: 'Data Analytics',
       image: course5,
+      description: 'Experts in data visualization, SQL, and statistical analysis'
     },
     {
-      name: 'Java Full Stack Developer',
+      name: 'Java Full Stack',
       image: 'https://www.mytaskpanel.com/wp-content/uploads/2023/04/consulting-blog-09.webp',
+      description: 'Spring Boot, Hibernate, and modern JavaScript framework specialists'
     },
     {
       name: 'Python Developer',
-      image: 'https://img.freepik.com/premium-photo/python-programming-language-programing-workflow-abstract-algorithm-concept-virtual-screen_161452-10951.jpg?w=1380',
+      image: 'https://img.freepik.com/premium-photo/python-programming-language-programing-workflow-abstract-algorithm-concept-virtual-screen_161452-10951.jpg',
+      description: 'Django, Flask, and data science ecosystem professionals'
     },
     {
       name: 'Software Testing',
-      image: 'https://www.keenesystems.com/hs-fs/hubfs/software-testing.jpg?width=900&name=software-testing.jpg',
+      image: 'https://www.keenesystems.com/hs-fs/hubfs/software-testing.jpg',
+      description: 'QA automation engineers with Selenium , CI/CD pipeline experience'
     },
     {
       name: 'Web Development',
-      image: 'https://img.freepik.com/free-photo/programming-background-with-person-working-with-codes-computer_23-2150010125.jpg?t=st=1744005662~exp=1744009262~hmac=3930b5adb150e5330917d0df67926a3129a58511e4c1d7b1f0f4fb1f62a7e5e7&w=996',
+      image: 'https://img.freepik.com/free-photo/programming-background-with-person-working-with-codes-computer_23-2150010125.jpg',
+      description: 'React, Angular, and Vue.js specialists with responsive design skills'
     },
   ];
 
   return (
-    <div className="bg-gray-100 py-12">
-      <div className="container mx-auto px-4 text-center">
-        <h1 className="sm:text-3xl font-semibold text-[#0057D3] mb-2">
-          Hire From Our Top-Level Specialized Learners
-        </h1>
-        <p className="text-lg text-gray-700 mb-8">Skilled Learners, Ready to Join Your Team.</p>
+    <section className="bg-gray-50 py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-[#0057D3] mb-3">
+            Hire From Our Top-Level Specialized Learners
+          </h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Skilled learners equipped with industry-relevant knowledge, ready to contribute to your team.
+          </p>
+        </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {learnerCategories.map((category, index) => (
-            <div
+            <article 
               key={index}
-              className="bg-white rounded-md shadow-md overflow-hidden hover:shadow-lg hover:scale-105 transition duration-300"
+              className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
             >
-              <img
-                src={category.image}
-                alt={category.name}
-                className="w-full h-44 object-cover rounded-t-md"
-              />
-              <div className="p-4">
-                <p className="text-gray-600 text-sm mt-2">
-                  Explore industry-level projects and courses in {category.name}.
-                </p>
+              <div className="aspect-w-16 aspect-h-9">
+                <img
+                  src={category.image}
+                  alt={`${category.name} specialization`}
+                  className="w-full h-48 object-cover"
+                  loading="lazy"
+                  width={400}
+                  height={225}
+                  onError={(e) => {
+                    e.target.onerror = null; 
+                    e.target.src = 'https://via.placeholder.com/400x225?text=Course+Image';
+                  }}
+                />
               </div>
-            </div>
+              <div className="p-5">
+                <h3 className="font-semibold text-lg text-gray-800 mb-2">{category.name}</h3>
+                <p className="text-gray-600 text-sm">
+                  {category.description}
+                </p>
+                <button 
+                  className="mt-4 text-sm font-medium text-[#0057D3] hover:text-[#003d99] transition-colors"
+                  aria-label={`Explore ${category.name} candidates`}
+                >
+                  View Candidates →
+                </button>
+              </div>
+            </article>
           ))}
         </div>
+
+        <div className="text-center mt-12">
+          <button className="bg-[#0057D3] hover:bg-[#0044b3] text-white font-medium py-3 px-8 rounded-md transition-colors duration-300">
+            Browse All Specializations
+          </button>
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
 
