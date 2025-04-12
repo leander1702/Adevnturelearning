@@ -23,13 +23,6 @@ import ArticlePage2 from "./components/ArticlePage2";
 import ArticlePage3 from "./components/ArticlePage3";
 import Register from "./components/Register";
 
-
-
-
-
-
-
-
 function App() {
 
 
